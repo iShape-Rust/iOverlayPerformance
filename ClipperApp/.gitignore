@@ -1,0 +1,38 @@
+# CMake build output
+build/
+CMakeFiles/
+cmake-build-release/
+cmake-build-debug/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+*.make
+
+# C++ object files and libraries
+*.o
+*.a
+*.so
+*.dylib
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Editor backups and temporary files
+*~
+*.swp
+
+# User-specific files
+*.user
+*.suo
+*.sublime-workspace
+*.sublime-project
+
+# IntelliJ IDEA specific
+.idea/
+*.iml
+
+# Visual Studio Code specific
+.vscode/
