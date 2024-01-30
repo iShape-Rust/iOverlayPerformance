@@ -1,12 +1,12 @@
 use std::env;
 use std::collections::HashMap;
 use i_overlay::bool::overlay_rule::OverlayRule;
-use crate::test::concentric_squares_test::ConcentricSquaresTest;
-use crate::test::lines_test::LinesTest;
-use crate::test::no_overlap_test::NoOverlapTest;
+use crate::test::nested_squares_test::NestedSquaresTest;
+use crate::test::lines_net_test::LinesNetTest;
+use crate::test::not_overlap_test::NotOverlapTest;
 
-use crate::test::squares_test::SquaresTest;
-use crate::test::random_polygons_test::RandomPolygonsTest;
+use crate::test::checkerboard_test::CheckerboardTest;
+use crate::test::irregular_polygon_test::IrregularPolygonTest;
 use crate::test::windows_test::WindowsTest;
 
 mod test;
@@ -37,22 +37,22 @@ fn main() {
 
     match test {
         0 => {
-            SquaresTest::run(count, OverlayRule::Union);
+            CheckerboardTest::run(count, OverlayRule::Union);
         }
         1 => {
-            SquaresTest::run(count, OverlayRule::Xor);
+            CheckerboardTest::run(count, OverlayRule::Xor);
         }
         2 => {
-            LinesTest::run(count, OverlayRule::Union)
+            LinesNetTest::run(count, OverlayRule::Union)
         }
         3 => {
-            LinesTest::run(count, OverlayRule::Xor)
+            LinesNetTest::run(count, OverlayRule::Xor)
         }
         4 => {
-            NoOverlapTest::run(count);
+            NotOverlapTest::run(count);
         }
         5 => {
-            RandomPolygonsTest::run(count);
+            IrregularPolygonTest::run(count);
         }
         6 => {
             WindowsTest::run(count, OverlayRule::Difference);
@@ -61,10 +61,10 @@ fn main() {
             WindowsTest::run(count, OverlayRule::Union);
         }
         8 => {
-            ConcentricSquaresTest::run(count, OverlayRule::Xor);
+            NestedSquaresTest::run(count, OverlayRule::Xor);
         }
         9 => {
-            ConcentricSquaresTest::run(count, OverlayRule::Union);
+            NestedSquaresTest::run(count, OverlayRule::Union);
         }
         _ => {
             println!("Test is not found");

@@ -4,7 +4,7 @@ use i_overlay::bool::overlay_rule::OverlayRule;
 use i_overlay::layout::overlay::{Overlay, ShapeType};
 use crate::test::util::Util;
 
-pub(crate) struct RandomPolygonsTest;
+pub(crate) struct IrregularPolygonTest;
 
 
 // 100_000 - 0.017672999
@@ -12,10 +12,11 @@ pub(crate) struct RandomPolygonsTest;
 // 300_000 - 0.09378231
 // 400_000 - 4.907101405
 
-impl RandomPolygonsTest {
+// An irregular self-intersecting polygon is generated, the vertices of which are defined by a fixed radius and angle.
+impl IrregularPolygonTest {
     pub(crate) fn run(n: usize) {
-        println!("Start RandomPolygons Test 2");
-        let subj_paths = Util::random_polygon(1000.0, n);
+        println!("Start IrregularPolygon Test 2");
+        let subj_paths = Util::irregular_polygon(1000.0, n);
 
         let start = Instant::now();
 

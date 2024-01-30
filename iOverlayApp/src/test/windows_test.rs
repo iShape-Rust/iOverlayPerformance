@@ -25,6 +25,7 @@ pub(crate) struct WindowsTest;
 //  800 - 7.275199854
 // 1600 - 30.257031037
 
+// A grid of square frames, each with a smaller square cutout in the center.
 impl WindowsTest {
     pub(crate) fn run(n: usize, rule: OverlayRule) {
         println!("Start Windows Test {:?}", rule);

@@ -5,7 +5,7 @@ use i_overlay::bool::overlay_rule::OverlayRule;
 use i_overlay::layout::overlay::{Overlay, ShapeType};
 use crate::test::util::Util;
 
-pub(crate) struct SquaresTest;
+pub(crate) struct CheckerboardTest;
 
 // Union:
 //  25  - 0.010584694
@@ -25,9 +25,10 @@ pub(crate) struct SquaresTest;
 //  800 - 11.994348965
 // 1600 - 51.169205573
 
-impl SquaresTest {
+// A grid of overlapping squares forming a simple checkerboard pattern.
+impl CheckerboardTest {
     pub(crate) fn run(n: usize, rule: OverlayRule) {
-        println!("Start Squares Test {:?}", rule);
+        println!("Start Checkerboard Test {:?}", rule);
         let subj_paths = Util::many_squares(FixVec::new(0, 0), 20, 30, n);
         let clip_paths = Util::many_squares(FixVec::new(15, 15), 20, 30, n - 1);
 

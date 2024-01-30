@@ -4,7 +4,7 @@ use i_overlay::bool::overlay_rule::OverlayRule;
 use i_overlay::layout::overlay::{Overlay, ShapeType};
 use crate::test::util::Util;
 
-pub(crate) struct  LinesTest;
+pub(crate) struct LinesNetTest;
 
 // Union:
 //   25  - 0.003469159
@@ -34,9 +34,10 @@ pub(crate) struct  LinesTest;
 //  900 - 47.947838463
 // 1000 - 64.686463853
 
-impl LinesTest {
+// A grid is formed by the intersection of a set of vertical and horizontal lines.
+impl LinesNetTest {
     pub(crate) fn run(n: usize, rule: OverlayRule) {
-        println!("Start Squares Test {:?}", rule);
+        println!("Start LinesNet Test {:?}", rule);
         let subj_paths = Util::many_lines_x(20, n);
         let clip_paths = Util::many_lines_y(20, n);
 

@@ -5,7 +5,7 @@ use i_overlay::bool::overlay_rule::OverlayRule;
 use i_overlay::layout::overlay::{Overlay, ShapeType};
 use crate::test::util::Util;
 
-pub(crate) struct NoOverlapTest;
+pub(crate) struct NotOverlapTest;
 
 //  25  - 0.00191984
 //  50  - 0.010274676
@@ -15,18 +15,19 @@ pub(crate) struct NoOverlapTest;
 //  800 - 5.293362805
 // 1600 - 21.095707913
 
-impl NoOverlapTest {
+// A grid of not overlapping squares.
+impl NotOverlapTest {
     pub(crate) fn run(n: usize) {
-        println!("Start NoOverlap Test");
+        println!("Start NotOverlap Test");
         let subj_paths = Util::many_squares(FixVec::new(0, 0), 20, 30, n);
 
         let start = Instant::now();
 
-        let mut overlay = Overlay::new(4 * n * n); // Assuming Overlay is defined elsewhere
-        overlay.add_paths(&subj_paths, ShapeType::Subject); // Assuming method and enum names
+        let mut overlay = Overlay::new(4 * n * n);
+        overlay.add_paths(&subj_paths, ShapeType::Subject);
 
-        let graph = overlay.build_graph(FillRule::NonZero); // Assuming FillRule enum
-        let result = graph.extract_shapes(OverlayRule::Subject); // Assuming method and types
+        let graph = overlay.build_graph(FillRule::NonZero);
+        let result = graph.extract_shapes(OverlayRule::Subject);
 
         assert!(!result.is_empty());
 
