@@ -6,15 +6,11 @@ use crate::test::util::Util;
 
 pub(crate) struct NestedSquaresTest;
 
-// Xor:
-//    1000  - 0.019245761
-//   10000  - 0.927409649
-//  100000  - 77.99924515
-
-// Union:
-//    1000  - 0.018955962
-//   10000  - 0.937482139
-//  100000  - 77.990919978
+// Intersect:
+//     100  - 0.001035854
+//    1000  - 0.018359345
+//   10000  - 0.93264052
+//  100000  - 78.232513293
 
 // A series of concentric squares, each progressively larger than the last.
 impl NestedSquaresTest {

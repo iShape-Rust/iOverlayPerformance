@@ -37,34 +37,22 @@ fn main() {
 
     match test {
         0 => {
-            CheckerboardTest::run(count, OverlayRule::Union);
-        }
-        1 => {
             CheckerboardTest::run(count, OverlayRule::Xor);
         }
-        2 => {
+        1 => {
             LinesNetTest::run(count, OverlayRule::Union)
         }
-        3 => {
-            LinesNetTest::run(count, OverlayRule::Xor)
-        }
-        4 => {
+        2 => {
             NotOverlapTest::run(count);
         }
-        5 => {
+        3 => {
             IrregularPolygonTest::run(count);
         }
-        6 => {
+        4 => {
             WindowsTest::run(count, OverlayRule::Difference);
         }
-        7 => {
-            WindowsTest::run(count, OverlayRule::Union);
-        }
-        8 => {
-            NestedSquaresTest::run(count, OverlayRule::Xor);
-        }
-        9 => {
-            NestedSquaresTest::run(count, OverlayRule::Union);
+        5 => {
+            NestedSquaresTest::run(count, OverlayRule::Intersect);
         }
         _ => {
             println!("Test is not found");

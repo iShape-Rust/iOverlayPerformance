@@ -20,20 +20,6 @@ pub(crate) struct LinesNetTest;
 //  900 - 47.216105921
 // 1000 - 64.886755957
 
-// Xor:
-//   25  - 0.003657718
-//   50  - 0.01766465
-//  100  - 0.101413229
-//  200  - 0.64390637
-//  300  - 1.877151657
-//  400  - 4.309943373
-//  500  - 7.829302811
-//  600 - 13.860809147
-//  700 - 22.323813061
-//  800 - 33.593015232
-//  900 - 47.947838463
-// 1000 - 64.686463853
-
 // A grid is formed by the intersection of a set of vertical and horizontal lines.
 impl LinesNetTest {
     pub(crate) fn run(n: usize, rule: OverlayRule) {
