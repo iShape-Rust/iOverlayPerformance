@@ -46,18 +46,16 @@ fn main() {
             NotOverlapTest::run(count);
         }
         3 => {
-            IrregularPolygonTest::run(count);
+            IrregularPolygonTest::run(count, OverlayRule::Intersect);
         }
         4 => {
             WindowsTest::run(count, OverlayRule::Difference);
         }
         5 => {
-            NestedSquaresTest::run(count, OverlayRule::Intersect);
+            NestedSquaresTest::run(count, OverlayRule::Xor);
         }
         _ => {
             println!("Test is not found");
         }
     }
-
-    // RandomPolygonsTest::run(10100);
 }

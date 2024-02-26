@@ -26,10 +26,10 @@ impl Util {
         result
     }
 
-    pub(super) fn irregular_polygon(radius: f64, n: usize) -> FixPath {
+    pub(super) fn irregular_polygon(radius: f64, angle: f64, n: usize) -> FixPath {
         let mut result = Vec::with_capacity(n);
         let da: f64 = PI * 0.7;
-        let mut a: f64 = 0.0;
+        let mut a: f64 = angle;
         for _ in 0..n {
             let sc = a.sin_cos();
 
