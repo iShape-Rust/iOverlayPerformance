@@ -16,6 +16,15 @@ pub(crate) struct CheckerboardTest;
 //  800 - 11.994348965
 // 1600 - 51.169205573
 
+// Xor:
+//  25  - 0.0087
+//  50  - 0.038597548
+//  100 - 0.163943776
+//  200 - 0.673153318
+//  400 - 2.733037367
+//  800 - 11.25430898
+// 1600 - 47.319312662
+
 // A grid of overlapping squares forming a simple checkerboard pattern.
 impl CheckerboardTest {
     pub(crate) fn run(n: usize, rule: OverlayRule) {

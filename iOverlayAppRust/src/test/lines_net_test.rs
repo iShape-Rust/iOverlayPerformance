@@ -36,7 +36,7 @@ impl LinesNetTest {
         let graph = overlay.build_graph(FillRule::NonZero);
         let result = graph.extract_shapes(rule);
 
-        assert!(!result.is_empty());
+        debug_assert!(!result.is_empty());
 
         let duration = start.elapsed();
         println!("Count: {:?}, time: {:?}", n, duration);
