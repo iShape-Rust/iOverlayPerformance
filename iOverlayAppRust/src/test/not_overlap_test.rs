@@ -1,8 +1,8 @@
 use std::time::Instant;
-use i_float::fix_vec::FixVec;
-use i_overlay::bool::fill_rule::FillRule;
-use i_overlay::bool::overlay_rule::OverlayRule;
-use i_overlay::layout::overlay::{Overlay, ShapeType};
+use i_float::point::IntPoint;
+use i_overlay::core::fill_rule::FillRule;
+use i_overlay::core::overlay::{Overlay, ShapeType};
+use i_overlay::core::overlay_rule::OverlayRule;
 use crate::test::util::Util;
 
 pub(crate) struct NotOverlapTest;
@@ -19,7 +19,7 @@ pub(crate) struct NotOverlapTest;
 impl NotOverlapTest {
     pub(crate) fn run(n: usize) {
         println!("Start NotOverlap Test");
-        let subj_paths = Util::many_squares(FixVec::new(0, 0), 20, 30, n);
+        let subj_paths = Util::many_squares(IntPoint::new(0, 0), 20, 30, n);
 
         let start = Instant::now();
 

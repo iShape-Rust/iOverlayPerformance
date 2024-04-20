@@ -1,6 +1,6 @@
 use std::env;
 use std::collections::HashMap;
-use i_overlay::bool::overlay_rule::OverlayRule;
+use i_overlay::core::overlay_rule::OverlayRule;
 use crate::test::nested_squares_test::NestedSquaresTest;
 use crate::test::lines_net_test::LinesNetTest;
 use crate::test::not_overlap_test::NotOverlapTest;

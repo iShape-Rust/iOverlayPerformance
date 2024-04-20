@@ -1,8 +1,8 @@
 use std::time::Instant;
-use i_float::fix_vec::FixVec;
-use i_overlay::bool::fill_rule::FillRule;
-use i_overlay::bool::overlay_rule::OverlayRule;
-use i_overlay::layout::overlay::{Overlay, ShapeType};
+use i_float::point::IntPoint;
+use i_overlay::core::fill_rule::FillRule;
+use i_overlay::core::overlay::{Overlay, ShapeType};
+use i_overlay::core::overlay_rule::OverlayRule;
 use crate::test::util::Util;
 
 pub(crate) struct WindowsTest;
@@ -22,8 +22,8 @@ impl WindowsTest {
         println!("Start Windows Test {:?}", rule);
 
         let offset = 30;
-        let x = (n as i64) * offset / 2;
-        let origin = FixVec::new(-x, -x);
+        let x = (n as i32) * offset / 2;
+        let origin = IntPoint::new(-x, -x);
         let (subj_paths, clip_paths) = Util::many_windows(origin, 20, 10, offset, n);
 
         let start = Instant::now();

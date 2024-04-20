@@ -4,9 +4,9 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-#i_float = { version = "^0.8" }
-#i_shape = { version = "^0.13" }
-#i_overlay = { version = "^0.22" }
+#i_float = { version = "^0.9.0" }
+#i_shape = { version = "^0.15.0" }
+#i_overlay = { version = "^0.24.4" }
 i_float = { path = "../../iFloat" }
 i_shape = { path = "../../iShape" }
 i_overlay = { path = "../../iOverlay" }

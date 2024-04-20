@@ -1,7 +1,7 @@
 use std::time::Instant;
-use i_overlay::bool::fill_rule::FillRule;
-use i_overlay::bool::overlay_rule::OverlayRule;
-use i_overlay::layout::overlay::{Overlay, ShapeType};
+use i_overlay::core::fill_rule::FillRule;
+use i_overlay::core::overlay::{Overlay, ShapeType};
+use i_overlay::core::overlay_rule::OverlayRule;
 use crate::test::util::Util;
 
 pub(crate) struct NestedSquaresTest;

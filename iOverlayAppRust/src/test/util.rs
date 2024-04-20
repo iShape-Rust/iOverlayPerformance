@@ -1,21 +1,21 @@
 use std::f64::consts::PI;
-use i_float::fix_vec::FixVec;
-use i_shape::fix_path::FixPath;
+use i_float::point::IntPoint;
+use i_shape::int::path::IntPath;
 
 pub(super) struct Util;
 
 impl Util {
-    pub(super) fn many_squares(start: FixVec, size: i64, offset: i64, n: usize) -> Vec<FixPath> {
+    pub(super) fn many_squares(start: IntPoint, size: i32, offset: i32, n: usize) -> Vec<IntPath> {
         let mut result = Vec::with_capacity(n * n);
         let mut y = start.y;
         for _ in 0..n {
             let mut x = start.x;
             for _ in 0..n {
-                let path: FixPath = vec![
-                    FixVec::new(x, y),
-                    FixVec::new(x, y + size),
-                    FixVec::new(x + size, y + size),
-                    FixVec::new(x + size, y),
+                let path: IntPath = vec![
+                    IntPoint::new(x, y),
+                    IntPoint::new(x, y + size),
+                    IntPoint::new(x + size, y + size),
+                    IntPoint::new(x + size, y),
                 ];
                 result.push(path);
                 x += offset;
@@ -26,24 +26,25 @@ impl Util {
         result
     }
 
-    pub(super) fn irregular_polygon(radius: f64, angle: f64, n: usize) -> FixPath {
+    pub(super) fn irregular_polygon(radius: f64, angle: f64, n: usize) -> IntPath {
         let mut result = Vec::with_capacity(n);
         let da: f64 = PI * 0.7;
         let mut a: f64 = angle;
+        let r = 1024.0 * radius;
         for _ in 0..n {
             let sc = a.sin_cos();
 
-            let x = radius * sc.1;
-            let y = radius * sc.0;
+            let x = r * sc.1;
+            let y = r * sc.0;
 
-            result.push(FixVec::new_f64(x, y));
+            result.push(IntPoint::new(x as i32, y as i32));
             a += da;
         }
 
         result
     }
 
-    pub(super) fn many_windows(start: FixVec, a: i64, b: i64, offset: i64, n: usize) -> (Vec<FixPath>, Vec<FixPath>) {
+    pub(super) fn many_windows(start: IntPoint, a: i32, b: i32, offset: i32, n: usize) -> (Vec<IntPath>, Vec<IntPath>) {
         let mut boundaries = Vec::with_capacity(n * n);
         let mut holes = Vec::with_capacity(n * n);
         let mut y = start.y;
@@ -52,19 +53,19 @@ impl Util {
         for _ in 0..n {
             let mut x = start.x;
             for _ in 0..n {
-                let boundary: FixPath = vec![
-                    FixVec::new(x, y),
-                    FixVec::new(x, y + a),
-                    FixVec::new(x + a, y + a),
-                    FixVec::new(x + a, y),
+                let boundary: IntPath = vec![
+                    IntPoint::new(x, y),
+                    IntPoint::new(x, y + a),
+                    IntPoint::new(x + a, y + a),
+                    IntPoint::new(x + a, y),
                 ];
                 boundaries.push(boundary);
 
-                let hole: FixPath = vec![
-                    FixVec::new(x + c, y + c),
-                    FixVec::new(x + c, y + d),
-                    FixVec::new(x + d, y + d),
-                    FixVec::new(x + d, y + c),
+                let hole: IntPath = vec![
+                    IntPoint::new(x + c, y + c),
+                    IntPoint::new(x + c, y + d),
+                    IntPoint::new(x + d, y + d),
+                    IntPoint::new(x + d, y + c),
                 ];
                 holes.push(hole);
 
@@ -76,15 +77,15 @@ impl Util {
         (boundaries, holes)
     }
 
-    pub(super) fn concentric_squares(a: i64, b: i64, n: usize) -> Vec<FixPath> {
+    pub(super) fn concentric_squares(a: i32, b: i32, n: usize) -> Vec<IntPath> {
         let mut result = Vec::with_capacity(n);
         let mut r = a;
         for _ in 0..n {
-            let path: FixPath = vec![
-                FixVec::new(-r, -r),
-                FixVec::new(-r, r),
-                FixVec::new(r, r),
-                FixVec::new(r, -r),
+            let path: IntPath = vec![
+                IntPoint::new(-r, -r),
+                IntPoint::new(-r, r),
+                IntPoint::new(r, r),
+                IntPoint::new(r, -r),
             ];
             result.push(path);
             r += b;
@@ -93,17 +94,17 @@ impl Util {
         result
     }
 
-    pub(super) fn many_lines_x(a: i64, n: usize) -> Vec<FixPath> {
+    pub(super) fn many_lines_x(a: i32, n: usize) -> Vec<IntPath> {
         let w = a / 2;
-        let s = a * (n as i64) / 2;
+        let s = a * (n as i32) / 2;
         let mut x = -s + w / 2;
         let mut result = Vec::with_capacity(n);
         for _ in 0..n {
-            let path: FixPath = vec![
-                FixVec::new(x, -s),
-                FixVec::new(x , s),
-                FixVec::new(x + w, s),
-                FixVec::new(x + w, -s)
+            let path: IntPath = vec![
+                IntPoint::new(x, -s),
+                IntPoint::new(x, s),
+                IntPoint::new(x + w, s),
+                IntPoint::new(x + w, -s),
             ];
             result.push(path);
             x += a;
@@ -112,17 +113,17 @@ impl Util {
         result
     }
 
-    pub(super) fn many_lines_y(a: i64, n: usize) -> Vec<FixPath> {
+    pub(super) fn many_lines_y(a: i32, n: usize) -> Vec<IntPath> {
         let h = a / 2;
-        let s = a * (n as i64) / 2;
+        let s = a * (n as i32) / 2;
         let mut y = -s + h / 2;
         let mut result = Vec::with_capacity(n);
         for _ in 0..n {
-            let path: FixPath = vec![
-                FixVec::new(-s, y),
-                FixVec::new(s , y),
-                FixVec::new(s, y - h),
-                FixVec::new(-s, y - h)
+            let path: IntPath = vec![
+                IntPoint::new(-s, y),
+                IntPoint::new(s, y),
+                IntPoint::new(s, y - h),
+                IntPoint::new(-s, y - h),
             ];
             result.push(path);
             y += a;
@@ -130,5 +131,4 @@ impl Util {
 
         result
     }
-
 }
