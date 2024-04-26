@@ -1,29 +1,23 @@
 use std::time::Instant;
 use i_float::point::IntPoint;
 use i_overlay::core::fill_rule::FillRule;
-use i_overlay::core::overlay::{Overlay, ShapeType};
+use i_overlay::core::overlay::Overlay;
 use i_overlay::core::overlay_rule::OverlayRule;
 use crate::test::util::Util;
 
 pub(crate) struct CheckerboardTest;
 
 // Xor:
-//  25  - 0.010604308
-//  50  - 0.045865777
-//  100 - 0.195157346
-//  200 - 0.797804374
-//  400 - 2.998709203
-//  800 - 11.994348965
-// 1600 - 51.169205573
-
-// Xor:
-//  25  - 0.0087
-//  50  - 0.038597548
-//  100 - 0.163943776
-//  200 - 0.673153318
-//  400 - 2.733037367
-//  800 - 11.25430898
-// 1600 - 47.319312662
+//  3(2.6)       - 0.0001(-4.0)
+//  6(4.9)       - 0.0005(-3.3)
+//  12(7.0)      - 0.0018(-2.7)
+//  25(9.2)      - 0.0087(-2.1)
+//  50(11.3)     - 0.0381(-1.4)
+//  100(13.3)    - 0.1653(-0.8)
+//  200(15.3)    - 0.6729(-0.2)
+//  400(17.3)    - 2.8136(0.4)
+//  800(19.3)    - 11.3557(1.1)
+// 1600(21.3)    - 46.8921(1.7)
 
 // A grid of overlapping squares forming a simple checkerboard pattern.
 impl CheckerboardTest {
@@ -34,16 +28,20 @@ impl CheckerboardTest {
 
         let start = Instant::now();
 
-        let mut overlay = Overlay::new(8 * n * n);
-        overlay.add_paths(&subj_paths, ShapeType::Subject);
-        overlay.add_paths(&clip_paths, ShapeType::Clip);
-
+        let overlay = Overlay::with_paths(&subj_paths, &clip_paths);
         let graph = overlay.build_graph(FillRule::NonZero);
         let result = graph.extract_shapes(rule);
 
+        let duration = start.elapsed();
+
         assert!(!result.is_empty());
 
-        let duration = start.elapsed();
-        println!("Count: {:?}, time: {:?}", n, duration);
+        let count = n * (n - 1);
+        let count_log = (count as f64).log2();
+
+        let time = duration.as_secs_f64();
+        let time_log = time.log10();
+
+        println!("{}({:.1})     - {:.4}({:.1})", n, count_log, time, time_log);
     }
 }

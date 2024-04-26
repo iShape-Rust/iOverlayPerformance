@@ -34,6 +34,4 @@ impl NotOverlapTest {
         let duration = start.elapsed();
         println!("Count: {:?}, time: {:?}", n, duration);
     }
-
-
 }

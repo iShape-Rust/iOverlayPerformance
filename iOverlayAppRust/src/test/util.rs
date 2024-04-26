@@ -77,21 +77,46 @@ impl Util {
         (boundaries, holes)
     }
 
-    pub(super) fn concentric_squares(a: i32, b: i32, n: usize) -> Vec<IntPath> {
-        let mut result = Vec::with_capacity(n);
-        let mut r = a;
+    pub(super) fn concentric_squares(a: i32, n: usize) -> (Vec<IntPath>, Vec<IntPath>) {
+        let mut vert = Vec::with_capacity(2 * n);
+        let mut horz = Vec::with_capacity(2 * n);
+        let s = 2 * a;
+        let mut r = s;
         for _ in 0..n {
-            let path: IntPath = vec![
+            let hz_top: IntPath = vec![
+                IntPoint::new(-r, r - a),
+                IntPoint::new(-r, r),
+                IntPoint::new(r, r),
+                IntPoint::new(r, r - a),
+            ];
+            let hz_bot: IntPath = vec![
+                IntPoint::new(-r, -r),
+                IntPoint::new(-r, -r + a),
+                IntPoint::new(r, -r + a),
+                IntPoint::new(r, -r),
+            ];
+            vert.push(hz_top);
+            vert.push(hz_bot);
+
+            let vt_left: IntPath = vec![
                 IntPoint::new(-r, -r),
                 IntPoint::new(-r, r),
+                IntPoint::new(-r + a, r),
+                IntPoint::new(-r + a, -r),
+            ];
+            let vt_right: IntPath = vec![
+                IntPoint::new(r - a, -r),
+                IntPoint::new(r - a, r),
                 IntPoint::new(r, r),
                 IntPoint::new(r, -r),
             ];
-            result.push(path);
-            r += b;
+            horz.push(vt_left);
+            horz.push(vt_right);
+
+            r += s;
         }
 
-        result
+        (vert, horz)
     }
 
     pub(super) fn many_lines_x(a: i32, n: usize) -> Vec<IntPath> {

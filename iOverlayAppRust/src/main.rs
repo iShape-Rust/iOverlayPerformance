@@ -40,7 +40,7 @@ fn main() {
             CheckerboardTest::run(count, OverlayRule::Xor);
         }
         1 => {
-            LinesNetTest::run(count, OverlayRule::Union)
+            LinesNetTest::run(count, OverlayRule::Intersect)
         }
         2 => {
             NotOverlapTest::run(count);
@@ -52,7 +52,7 @@ fn main() {
             WindowsTest::run(count, OverlayRule::Difference);
         }
         5 => {
-            NestedSquaresTest::run(count, OverlayRule::Xor);
+            NestedSquaresTest::run(count, OverlayRule::Union);
         }
         _ => {
             println!("Test is not found");

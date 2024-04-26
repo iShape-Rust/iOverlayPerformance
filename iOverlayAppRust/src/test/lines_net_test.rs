@@ -1,24 +1,20 @@
 use std::time::Instant;
 use i_overlay::core::fill_rule::FillRule;
-use i_overlay::core::overlay::{Overlay, ShapeType};
+use i_overlay::core::overlay::Overlay;
 use i_overlay::core::overlay_rule::OverlayRule;
 use crate::test::util::Util;
 
 pub(crate) struct LinesNetTest;
 
-// Union:
-//   25  - 0.003469159
-//   50  - 0.016720316
-//  100  - 0.100604056
-//  200  - 0.63058424
-//  300  - 1.832248187
-//  400  - 4.158703557
-//  500  - 7.595058528
-//  600 - 13.479658167
-//  700 - 21.908887535
-//  800 - 33.237526606
-//  900 - 47.216105921
-// 1000 - 64.886755957
+// Intersection:
+//   12(4.6)     - 0.0009(-3.0)
+//   25(5.6)     - 0.0045(-2.3)
+//   50(6.6)     - 0.0271(-1.6)
+//  100(7.6)     - 0.1864(-0.7)
+//  200(8.6)     - 0.5616(-0.3)
+//  400(9.6)     - 3.5141(0.5)
+//  800(10.6)    - 26.9714(1.4)
+//  1600(11.6)   - 233.7291(2.4)
 
 // A grid is formed by the intersection of a set of vertical and horizontal lines.
 impl LinesNetTest {
@@ -29,16 +25,20 @@ impl LinesNetTest {
 
         let start = Instant::now();
 
-        let mut overlay = Overlay::new(8 * n);
-        overlay.add_paths(&subj_paths, ShapeType::Subject);
-        overlay.add_paths(&clip_paths, ShapeType::Clip);
-
+        let overlay = Overlay::with_paths(&subj_paths, &clip_paths);
         let graph = overlay.build_graph(FillRule::NonZero);
         let result = graph.extract_shapes(rule);
 
+        let duration = start.elapsed();
+
         debug_assert!(!result.is_empty());
 
-        let duration = start.elapsed();
-        println!("Count: {:?}, time: {:?}", n, duration);
+        let count = 2 * n;
+        let count_log = (count as f64).log2();
+
+        let time = duration.as_secs_f64();
+        let time_log = time.log10();
+
+        println!("{}({:.1})     - {:.4}({:.1})", n, count_log, time, time_log);
     }
 }
