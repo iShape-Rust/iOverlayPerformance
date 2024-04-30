@@ -33,7 +33,7 @@ namespace Clipper2Lib {
 
 	//Note: all clipping operations except for Difference are commutative.
 	enum class ClipType { None, Intersection, Union, Difference, Xor };
-	
+
 	enum class PathType { Subject, Clip };
 	enum class JoinWith { None, Left, Right };
 

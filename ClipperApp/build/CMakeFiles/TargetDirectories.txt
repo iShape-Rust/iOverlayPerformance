@@ -1,0 +1,3 @@
+/Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/build/CMakeFiles/ClipperApp.dir
+/Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/build/CMakeFiles/edit_cache.dir
+/Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/build/CMakeFiles/rebuild_cache.dir

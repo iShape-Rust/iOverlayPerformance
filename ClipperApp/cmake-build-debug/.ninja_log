@@ -1,0 +1,14 @@
+# ninja log v5
+3	1108	1714474282773578479	CMakeFiles/ClipperApp.dir/NotOverlapTest.cpp.o	a3725cb881cdeb5c
+2	1089	1714474282754230951	CMakeFiles/ClipperApp.dir/main.cpp.o	ada1c29786c47555
+13	1533	1714474301179820664	CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.offset.cpp.o	d04deb81e471c2e3
+10	1335	1714474331034742085	CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.rectclip.cpp.o	ef41556270ee9c4b
+12	1924	1714474301574658347	CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.engine.cpp.o	6e8acc9b31adb84d
+1	76	1714475875589061756	build.ninja	38dbd999a8478a8d
+10	1152	1714474330850381111	CMakeFiles/ClipperApp.dir/WindowsTest.cpp.o	6b8b7b5cd8232af5
+9	1067	1714474717795748161	CMakeFiles/ClipperApp.dir/CheckerboardTest.cpp.o	a92ff11b2d8d1c92
+2	1159	1714474282824935675	CMakeFiles/ClipperApp.dir/Util.cpp.o	cf1e42026852f3b9
+12	1180	1714474330877347293	CMakeFiles/ClipperApp.dir/IrregularPolygonTest.cpp.o	194428e8daec5086
+1068	1133	1714474717866730193	ClipperApp	2fc803d17ba92893
+12	1203	1714474300852094324	CMakeFiles/ClipperApp.dir/LinesNetTest.cpp.o	662001d327975507
+10	1081	1714474376505482814	CMakeFiles/ClipperApp.dir/NestedSquaresTest.cpp.o	d0ca90ceca24ef65
