@@ -1,5 +1,5 @@
 CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.rectclip.cpp.o: \
-  /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/Clipper2Lib/src/clipper.rectclip.cpp \
+  /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/Clipper2Lib/src/clipper.rectclip.cpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/cmath \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__assert \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__config \
@@ -214,7 +214,7 @@ CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.rectclip.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/malloc/_ptrcheck.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_dev_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_mode_t.h \
-  /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/Clipper2Lib/include/clipper2/clipper.h \
+  /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/Clipper2Lib/include/clipper2/clipper.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/cstdlib \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/vector \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__algorithm/copy.h \
@@ -845,7 +845,7 @@ CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.rectclip.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/cstdarg \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__memory/temp_value.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__split_buffer \
-  /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/Clipper2Lib/include/clipper2/clipper.core.h \
+  /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/Clipper2Lib/include/clipper2/clipper.core.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/iostream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/istream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/ostream \
@@ -889,10 +889,10 @@ CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.rectclip.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/pointer_to_binary_function.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/pointer_to_unary_function.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/unary_negate.h \
-  /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/Clipper2Lib/include/clipper2/clipper.version.h \
-  /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/Clipper2Lib/include/clipper2/clipper.engine.h \
+  /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/Clipper2Lib/include/clipper2/clipper.version.h \
+  /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/Clipper2Lib/include/clipper2/clipper.engine.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/queue \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/deque \
-  /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/Clipper2Lib/include/clipper2/clipper.offset.h \
-  /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/Clipper2Lib/include/clipper2/clipper.minkowski.h \
-  /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/Clipper2Lib/include/clipper2/clipper.rectclip.h
+  /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/Clipper2Lib/include/clipper2/clipper.offset.h \
+  /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/Clipper2Lib/include/clipper2/clipper.minkowski.h \
+  /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/Clipper2Lib/include/clipper2/clipper.rectclip.h

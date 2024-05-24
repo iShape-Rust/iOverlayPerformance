@@ -54,10 +54,10 @@ RM = /usr/local/Cellar/cmake/3.27.7/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp
+CMAKE_SOURCE_DIR = /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/build
+CMAKE_BINARY_DIR = /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -81,14 +81,14 @@ clean: CMakeFiles/ClipperApp.dir/clean
 CMakeFiles/ClipperApp.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ClipperApp.dir/build.make CMakeFiles/ClipperApp.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ClipperApp.dir/build.make CMakeFiles/ClipperApp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12 "Built target ClipperApp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12 "Built target ClipperApp"
 .PHONY : CMakeFiles/ClipperApp.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ClipperApp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/build/CMakeFiles 12
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/build/CMakeFiles 12
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ClipperApp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/build/CMakeFiles 0
 .PHONY : CMakeFiles/ClipperApp.dir/rule
 
 # Convenience name for target.

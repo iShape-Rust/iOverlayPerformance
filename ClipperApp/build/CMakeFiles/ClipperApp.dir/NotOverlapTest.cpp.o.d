@@ -1,7 +1,7 @@
 CMakeFiles/ClipperApp.dir/NotOverlapTest.cpp.o: \
-  /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/NotOverlapTest.cpp \
-  /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/NotOverlapTest.h \
-  /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/Clipper2Lib/include/clipper2/clipper.core.h \
+  /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/NotOverlapTest.cpp \
+  /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/NotOverlapTest.h \
+  /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/Clipper2Lib/include/clipper2/clipper.core.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/cstdint \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__assert \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__config \
@@ -889,15 +889,15 @@ CMakeFiles/ClipperApp.dir/NotOverlapTest.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/pointer_to_binary_function.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/pointer_to_unary_function.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/unary_negate.h \
-  /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/Clipper2Lib/include/clipper2/clipper.version.h \
-  /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/Util.h \
-  /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/Clipper2Lib/include/clipper2/clipper.h \
-  /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/Clipper2Lib/include/clipper2/clipper.engine.h \
+  /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/Clipper2Lib/include/clipper2/clipper.version.h \
+  /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/Util.h \
+  /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/Clipper2Lib/include/clipper2/clipper.h \
+  /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/Clipper2Lib/include/clipper2/clipper.engine.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/queue \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/deque \
-  /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/Clipper2Lib/include/clipper2/clipper.offset.h \
-  /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/Clipper2Lib/include/clipper2/clipper.minkowski.h \
-  /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/Clipper2Lib/include/clipper2/clipper.rectclip.h \
+  /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/Clipper2Lib/include/clipper2/clipper.offset.h \
+  /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/Clipper2Lib/include/clipper2/clipper.minkowski.h \
+  /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/Clipper2Lib/include/clipper2/clipper.rectclip.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/chrono \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__chrono/calendar.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__chrono/convert_to_tm.h \
@@ -914,4 +914,5 @@ CMakeFiles/ClipperApp.dir/NotOverlapTest.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__chrono/year_month.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__chrono/year_month_day.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__chrono/year_month_weekday.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__chrono/literals.h
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__chrono/literals.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/iomanip

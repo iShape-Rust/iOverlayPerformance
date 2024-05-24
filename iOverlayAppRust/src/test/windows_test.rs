@@ -7,17 +7,18 @@ use crate::test::util::Util;
 
 pub(crate) struct WindowsTest;
 
+// 4
 // Difference:
-// 3(2.6)         - 0.0001(-4.0)
-// 6(3.6)         - 0.0002(-3.6)
-// 12(4.6)        - 0.0007(-3.2)
-// 25(5.6)        - 0.0030(-2.5)
-// 50(6.6)        - 0.0117(-1.9)
-// 100(7.6)       - 0.0512(-1.3)
-// 200(8.6)       - 0.2159(-0.7)
-// 400(9.6)       - 0.8885(-0.1)
-// 800(10.6)      - 3.6496(0.6)
-// 1600(11.6)     - 15.4913(1.2)
+// 3(2.6)         - 0.0000(-4.6)
+// 6(3.6)         - 0.0001(-4.0)
+// 12(4.6)        - 0.0004(-3.4)
+// 25(5.6)        - 0.0021(-2.7)
+// 50(6.6)        - 0.0093(-2.0)
+// 100(7.6)       - 0.0447(-1.3)
+// 200(8.6)       - 0.2036(-0.7)
+// 400(9.6)       - 0.8915(-0.0)
+// 800(10.6)      - 3.4765(0.5)
+// 1600(11.6)     - 14.6853(1.2)
 
 // A grid of square frames, each with a smaller square cutout in the center.
 impl WindowsTest {
@@ -30,18 +31,19 @@ impl WindowsTest {
         let (subj_paths, clip_paths) = Util::many_windows(origin, 20, 10, offset, n);
 
         let start = Instant::now();
-
-        let overlay = Overlay::with_paths(&subj_paths, &clip_paths);
-        let graph = overlay.build_graph(FillRule::NonZero);
-        let result = graph.extract_shapes(rule);
+        let it_count = ((500.0 / (n as f64)) as usize).max(1);
+        let it_count= it_count * it_count;
+        for _ in 0..it_count {
+            let overlay = Overlay::with_paths(&subj_paths, &clip_paths);
+            let graph = overlay.build_graph(FillRule::NonZero);
+            _ = graph.extract_shapes(rule);
+        }
 
         let duration = start.elapsed();
-        assert!(!result.is_empty());
+        let time = duration.as_secs_f64() / it_count as f64;
 
         let count = 2 * n;
         let count_log = (count as f64).log2();
-
-        let time = duration.as_secs_f64();
         let time_log = time.log10();
 
         println!("{}({:.1})     - {:.4}({:.1})", n, count_log, time, time_log);

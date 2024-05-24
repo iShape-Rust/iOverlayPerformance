@@ -18,22 +18,20 @@ void CheckerboardTest::run(int n, ClipType clipType) {
     auto subj = manySquares({0, 0}, 20, 30, n);
     auto clip = manySquares({15, 15}, 20, 30, n - 1);
 
-    int it_count = 400 / n;
-    it_count = it_count < 1 ? 1 : it_count;
-    double time = 0.0;
+    int it_count = 1000 / n;
+    it_count = it_count < 0 ? 1 : it_count;
+    auto start = std::chrono::high_resolution_clock::now();
 
     for (int i = 0; i < it_count; ++i) {
-        auto start = std::chrono::high_resolution_clock::now();
-
         Paths64 solution = BooleanOp(clipType, FillRule::NonZero, subj, clip);
-
-        auto end = std::chrono::high_resolution_clock::now();
-        std::chrono::duration<double> elapsed = end - start;
-        time = time + elapsed.count();
     }
-    time = time / (double)it_count;
 
-    int count = n * (n - 1);
+    auto end = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double> elapsed = end - start;
+
+    double time = elapsed.count() / (double)it_count;
+
+    int count = n * n + (n - 1) * (n - 1);
     double count_log = log2(count);
 
     double time_log = log10(time);

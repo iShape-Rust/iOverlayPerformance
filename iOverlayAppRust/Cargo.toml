@@ -3,10 +3,15 @@ name = "overlay_performance"
 version = "0.1.0"
 edition = "2021"
 
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
 [dependencies]
-#i_float = { version = "^1.0.0" }
-#i_shape = { version = "^1.0.0" }
-#i_overlay = { version = "^1.0.0" }
+#i_float = { version = "^1.0.3" }
+#i_shape = { version = "^1.0.2" }
+#i_overlay = { version = "^1.1.0" }
 i_float = { path = "../../iFloat" }
 i_shape = { path = "../../iShape" }
 i_overlay = { path = "../../iOverlay" }
+

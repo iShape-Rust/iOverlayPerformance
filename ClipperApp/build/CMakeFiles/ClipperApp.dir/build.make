@@ -53,10 +53,10 @@ RM = /usr/local/Cellar/cmake/3.27.7/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp
+CMAKE_SOURCE_DIR = /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/build
+CMAKE_BINARY_DIR = /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ClipperApp.dir/depend.make
@@ -70,158 +70,158 @@ include CMakeFiles/ClipperApp.dir/progress.make
 include CMakeFiles/ClipperApp.dir/flags.make
 
 CMakeFiles/ClipperApp.dir/main.cpp.o: CMakeFiles/ClipperApp.dir/flags.make
-CMakeFiles/ClipperApp.dir/main.cpp.o: /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/main.cpp
+CMakeFiles/ClipperApp.dir/main.cpp.o: /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/main.cpp
 CMakeFiles/ClipperApp.dir/main.cpp.o: CMakeFiles/ClipperApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ClipperApp.dir/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ClipperApp.dir/main.cpp.o -MF CMakeFiles/ClipperApp.dir/main.cpp.o.d -o CMakeFiles/ClipperApp.dir/main.cpp.o -c /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ClipperApp.dir/main.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ClipperApp.dir/main.cpp.o -MF CMakeFiles/ClipperApp.dir/main.cpp.o.d -o CMakeFiles/ClipperApp.dir/main.cpp.o -c /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/main.cpp
 
 CMakeFiles/ClipperApp.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ClipperApp.dir/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/main.cpp > CMakeFiles/ClipperApp.dir/main.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/main.cpp > CMakeFiles/ClipperApp.dir/main.cpp.i
 
 CMakeFiles/ClipperApp.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ClipperApp.dir/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/main.cpp -o CMakeFiles/ClipperApp.dir/main.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/main.cpp -o CMakeFiles/ClipperApp.dir/main.cpp.s
 
 CMakeFiles/ClipperApp.dir/Util.cpp.o: CMakeFiles/ClipperApp.dir/flags.make
-CMakeFiles/ClipperApp.dir/Util.cpp.o: /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/Util.cpp
+CMakeFiles/ClipperApp.dir/Util.cpp.o: /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/Util.cpp
 CMakeFiles/ClipperApp.dir/Util.cpp.o: CMakeFiles/ClipperApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ClipperApp.dir/Util.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ClipperApp.dir/Util.cpp.o -MF CMakeFiles/ClipperApp.dir/Util.cpp.o.d -o CMakeFiles/ClipperApp.dir/Util.cpp.o -c /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/Util.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ClipperApp.dir/Util.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ClipperApp.dir/Util.cpp.o -MF CMakeFiles/ClipperApp.dir/Util.cpp.o.d -o CMakeFiles/ClipperApp.dir/Util.cpp.o -c /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/Util.cpp
 
 CMakeFiles/ClipperApp.dir/Util.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ClipperApp.dir/Util.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/Util.cpp > CMakeFiles/ClipperApp.dir/Util.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/Util.cpp > CMakeFiles/ClipperApp.dir/Util.cpp.i
 
 CMakeFiles/ClipperApp.dir/Util.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ClipperApp.dir/Util.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/Util.cpp -o CMakeFiles/ClipperApp.dir/Util.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/Util.cpp -o CMakeFiles/ClipperApp.dir/Util.cpp.s
 
 CMakeFiles/ClipperApp.dir/NotOverlapTest.cpp.o: CMakeFiles/ClipperApp.dir/flags.make
-CMakeFiles/ClipperApp.dir/NotOverlapTest.cpp.o: /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/NotOverlapTest.cpp
+CMakeFiles/ClipperApp.dir/NotOverlapTest.cpp.o: /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/NotOverlapTest.cpp
 CMakeFiles/ClipperApp.dir/NotOverlapTest.cpp.o: CMakeFiles/ClipperApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ClipperApp.dir/NotOverlapTest.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ClipperApp.dir/NotOverlapTest.cpp.o -MF CMakeFiles/ClipperApp.dir/NotOverlapTest.cpp.o.d -o CMakeFiles/ClipperApp.dir/NotOverlapTest.cpp.o -c /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/NotOverlapTest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ClipperApp.dir/NotOverlapTest.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ClipperApp.dir/NotOverlapTest.cpp.o -MF CMakeFiles/ClipperApp.dir/NotOverlapTest.cpp.o.d -o CMakeFiles/ClipperApp.dir/NotOverlapTest.cpp.o -c /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/NotOverlapTest.cpp
 
 CMakeFiles/ClipperApp.dir/NotOverlapTest.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ClipperApp.dir/NotOverlapTest.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/NotOverlapTest.cpp > CMakeFiles/ClipperApp.dir/NotOverlapTest.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/NotOverlapTest.cpp > CMakeFiles/ClipperApp.dir/NotOverlapTest.cpp.i
 
 CMakeFiles/ClipperApp.dir/NotOverlapTest.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ClipperApp.dir/NotOverlapTest.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/NotOverlapTest.cpp -o CMakeFiles/ClipperApp.dir/NotOverlapTest.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/NotOverlapTest.cpp -o CMakeFiles/ClipperApp.dir/NotOverlapTest.cpp.s
 
 CMakeFiles/ClipperApp.dir/CheckerboardTest.cpp.o: CMakeFiles/ClipperApp.dir/flags.make
-CMakeFiles/ClipperApp.dir/CheckerboardTest.cpp.o: /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/CheckerboardTest.cpp
+CMakeFiles/ClipperApp.dir/CheckerboardTest.cpp.o: /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/CheckerboardTest.cpp
 CMakeFiles/ClipperApp.dir/CheckerboardTest.cpp.o: CMakeFiles/ClipperApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ClipperApp.dir/CheckerboardTest.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ClipperApp.dir/CheckerboardTest.cpp.o -MF CMakeFiles/ClipperApp.dir/CheckerboardTest.cpp.o.d -o CMakeFiles/ClipperApp.dir/CheckerboardTest.cpp.o -c /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/CheckerboardTest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ClipperApp.dir/CheckerboardTest.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ClipperApp.dir/CheckerboardTest.cpp.o -MF CMakeFiles/ClipperApp.dir/CheckerboardTest.cpp.o.d -o CMakeFiles/ClipperApp.dir/CheckerboardTest.cpp.o -c /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/CheckerboardTest.cpp
 
 CMakeFiles/ClipperApp.dir/CheckerboardTest.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ClipperApp.dir/CheckerboardTest.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/CheckerboardTest.cpp > CMakeFiles/ClipperApp.dir/CheckerboardTest.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/CheckerboardTest.cpp > CMakeFiles/ClipperApp.dir/CheckerboardTest.cpp.i
 
 CMakeFiles/ClipperApp.dir/CheckerboardTest.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ClipperApp.dir/CheckerboardTest.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/CheckerboardTest.cpp -o CMakeFiles/ClipperApp.dir/CheckerboardTest.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/CheckerboardTest.cpp -o CMakeFiles/ClipperApp.dir/CheckerboardTest.cpp.s
 
 CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.engine.cpp.o: CMakeFiles/ClipperApp.dir/flags.make
-CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.engine.cpp.o: /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/Clipper2Lib/src/clipper.engine.cpp
+CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.engine.cpp.o: /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/Clipper2Lib/src/clipper.engine.cpp
 CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.engine.cpp.o: CMakeFiles/ClipperApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.engine.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.engine.cpp.o -MF CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.engine.cpp.o.d -o CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.engine.cpp.o -c /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/Clipper2Lib/src/clipper.engine.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.engine.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.engine.cpp.o -MF CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.engine.cpp.o.d -o CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.engine.cpp.o -c /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/Clipper2Lib/src/clipper.engine.cpp
 
 CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.engine.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.engine.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/Clipper2Lib/src/clipper.engine.cpp > CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.engine.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/Clipper2Lib/src/clipper.engine.cpp > CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.engine.cpp.i
 
 CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.engine.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.engine.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/Clipper2Lib/src/clipper.engine.cpp -o CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.engine.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/Clipper2Lib/src/clipper.engine.cpp -o CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.engine.cpp.s
 
 CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.offset.cpp.o: CMakeFiles/ClipperApp.dir/flags.make
-CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.offset.cpp.o: /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/Clipper2Lib/src/clipper.offset.cpp
+CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.offset.cpp.o: /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/Clipper2Lib/src/clipper.offset.cpp
 CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.offset.cpp.o: CMakeFiles/ClipperApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.offset.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.offset.cpp.o -MF CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.offset.cpp.o.d -o CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.offset.cpp.o -c /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/Clipper2Lib/src/clipper.offset.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.offset.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.offset.cpp.o -MF CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.offset.cpp.o.d -o CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.offset.cpp.o -c /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/Clipper2Lib/src/clipper.offset.cpp
 
 CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.offset.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.offset.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/Clipper2Lib/src/clipper.offset.cpp > CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.offset.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/Clipper2Lib/src/clipper.offset.cpp > CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.offset.cpp.i
 
 CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.offset.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.offset.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/Clipper2Lib/src/clipper.offset.cpp -o CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.offset.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/Clipper2Lib/src/clipper.offset.cpp -o CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.offset.cpp.s
 
 CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.rectclip.cpp.o: CMakeFiles/ClipperApp.dir/flags.make
-CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.rectclip.cpp.o: /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/Clipper2Lib/src/clipper.rectclip.cpp
+CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.rectclip.cpp.o: /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/Clipper2Lib/src/clipper.rectclip.cpp
 CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.rectclip.cpp.o: CMakeFiles/ClipperApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.rectclip.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.rectclip.cpp.o -MF CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.rectclip.cpp.o.d -o CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.rectclip.cpp.o -c /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/Clipper2Lib/src/clipper.rectclip.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.rectclip.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.rectclip.cpp.o -MF CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.rectclip.cpp.o.d -o CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.rectclip.cpp.o -c /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/Clipper2Lib/src/clipper.rectclip.cpp
 
 CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.rectclip.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.rectclip.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/Clipper2Lib/src/clipper.rectclip.cpp > CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.rectclip.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/Clipper2Lib/src/clipper.rectclip.cpp > CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.rectclip.cpp.i
 
 CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.rectclip.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.rectclip.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/Clipper2Lib/src/clipper.rectclip.cpp -o CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.rectclip.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/Clipper2Lib/src/clipper.rectclip.cpp -o CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.rectclip.cpp.s
 
 CMakeFiles/ClipperApp.dir/WindowsTest.cpp.o: CMakeFiles/ClipperApp.dir/flags.make
-CMakeFiles/ClipperApp.dir/WindowsTest.cpp.o: /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/WindowsTest.cpp
+CMakeFiles/ClipperApp.dir/WindowsTest.cpp.o: /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/WindowsTest.cpp
 CMakeFiles/ClipperApp.dir/WindowsTest.cpp.o: CMakeFiles/ClipperApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ClipperApp.dir/WindowsTest.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ClipperApp.dir/WindowsTest.cpp.o -MF CMakeFiles/ClipperApp.dir/WindowsTest.cpp.o.d -o CMakeFiles/ClipperApp.dir/WindowsTest.cpp.o -c /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/WindowsTest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ClipperApp.dir/WindowsTest.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ClipperApp.dir/WindowsTest.cpp.o -MF CMakeFiles/ClipperApp.dir/WindowsTest.cpp.o.d -o CMakeFiles/ClipperApp.dir/WindowsTest.cpp.o -c /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/WindowsTest.cpp
 
 CMakeFiles/ClipperApp.dir/WindowsTest.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ClipperApp.dir/WindowsTest.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/WindowsTest.cpp > CMakeFiles/ClipperApp.dir/WindowsTest.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/WindowsTest.cpp > CMakeFiles/ClipperApp.dir/WindowsTest.cpp.i
 
 CMakeFiles/ClipperApp.dir/WindowsTest.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ClipperApp.dir/WindowsTest.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/WindowsTest.cpp -o CMakeFiles/ClipperApp.dir/WindowsTest.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/WindowsTest.cpp -o CMakeFiles/ClipperApp.dir/WindowsTest.cpp.s
 
 CMakeFiles/ClipperApp.dir/LinesNetTest.cpp.o: CMakeFiles/ClipperApp.dir/flags.make
-CMakeFiles/ClipperApp.dir/LinesNetTest.cpp.o: /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/LinesNetTest.cpp
+CMakeFiles/ClipperApp.dir/LinesNetTest.cpp.o: /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/LinesNetTest.cpp
 CMakeFiles/ClipperApp.dir/LinesNetTest.cpp.o: CMakeFiles/ClipperApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/ClipperApp.dir/LinesNetTest.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ClipperApp.dir/LinesNetTest.cpp.o -MF CMakeFiles/ClipperApp.dir/LinesNetTest.cpp.o.d -o CMakeFiles/ClipperApp.dir/LinesNetTest.cpp.o -c /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/LinesNetTest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/ClipperApp.dir/LinesNetTest.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ClipperApp.dir/LinesNetTest.cpp.o -MF CMakeFiles/ClipperApp.dir/LinesNetTest.cpp.o.d -o CMakeFiles/ClipperApp.dir/LinesNetTest.cpp.o -c /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/LinesNetTest.cpp
 
 CMakeFiles/ClipperApp.dir/LinesNetTest.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ClipperApp.dir/LinesNetTest.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/LinesNetTest.cpp > CMakeFiles/ClipperApp.dir/LinesNetTest.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/LinesNetTest.cpp > CMakeFiles/ClipperApp.dir/LinesNetTest.cpp.i
 
 CMakeFiles/ClipperApp.dir/LinesNetTest.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ClipperApp.dir/LinesNetTest.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/LinesNetTest.cpp -o CMakeFiles/ClipperApp.dir/LinesNetTest.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/LinesNetTest.cpp -o CMakeFiles/ClipperApp.dir/LinesNetTest.cpp.s
 
 CMakeFiles/ClipperApp.dir/IrregularPolygonTest.cpp.o: CMakeFiles/ClipperApp.dir/flags.make
-CMakeFiles/ClipperApp.dir/IrregularPolygonTest.cpp.o: /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/IrregularPolygonTest.cpp
+CMakeFiles/ClipperApp.dir/IrregularPolygonTest.cpp.o: /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/IrregularPolygonTest.cpp
 CMakeFiles/ClipperApp.dir/IrregularPolygonTest.cpp.o: CMakeFiles/ClipperApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/ClipperApp.dir/IrregularPolygonTest.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ClipperApp.dir/IrregularPolygonTest.cpp.o -MF CMakeFiles/ClipperApp.dir/IrregularPolygonTest.cpp.o.d -o CMakeFiles/ClipperApp.dir/IrregularPolygonTest.cpp.o -c /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/IrregularPolygonTest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/ClipperApp.dir/IrregularPolygonTest.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ClipperApp.dir/IrregularPolygonTest.cpp.o -MF CMakeFiles/ClipperApp.dir/IrregularPolygonTest.cpp.o.d -o CMakeFiles/ClipperApp.dir/IrregularPolygonTest.cpp.o -c /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/IrregularPolygonTest.cpp
 
 CMakeFiles/ClipperApp.dir/IrregularPolygonTest.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ClipperApp.dir/IrregularPolygonTest.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/IrregularPolygonTest.cpp > CMakeFiles/ClipperApp.dir/IrregularPolygonTest.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/IrregularPolygonTest.cpp > CMakeFiles/ClipperApp.dir/IrregularPolygonTest.cpp.i
 
 CMakeFiles/ClipperApp.dir/IrregularPolygonTest.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ClipperApp.dir/IrregularPolygonTest.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/IrregularPolygonTest.cpp -o CMakeFiles/ClipperApp.dir/IrregularPolygonTest.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/IrregularPolygonTest.cpp -o CMakeFiles/ClipperApp.dir/IrregularPolygonTest.cpp.s
 
 CMakeFiles/ClipperApp.dir/NestedSquaresTest.cpp.o: CMakeFiles/ClipperApp.dir/flags.make
-CMakeFiles/ClipperApp.dir/NestedSquaresTest.cpp.o: /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/NestedSquaresTest.cpp
+CMakeFiles/ClipperApp.dir/NestedSquaresTest.cpp.o: /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/NestedSquaresTest.cpp
 CMakeFiles/ClipperApp.dir/NestedSquaresTest.cpp.o: CMakeFiles/ClipperApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/ClipperApp.dir/NestedSquaresTest.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ClipperApp.dir/NestedSquaresTest.cpp.o -MF CMakeFiles/ClipperApp.dir/NestedSquaresTest.cpp.o.d -o CMakeFiles/ClipperApp.dir/NestedSquaresTest.cpp.o -c /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/NestedSquaresTest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/ClipperApp.dir/NestedSquaresTest.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ClipperApp.dir/NestedSquaresTest.cpp.o -MF CMakeFiles/ClipperApp.dir/NestedSquaresTest.cpp.o.d -o CMakeFiles/ClipperApp.dir/NestedSquaresTest.cpp.o -c /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/NestedSquaresTest.cpp
 
 CMakeFiles/ClipperApp.dir/NestedSquaresTest.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ClipperApp.dir/NestedSquaresTest.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/NestedSquaresTest.cpp > CMakeFiles/ClipperApp.dir/NestedSquaresTest.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/NestedSquaresTest.cpp > CMakeFiles/ClipperApp.dir/NestedSquaresTest.cpp.i
 
 CMakeFiles/ClipperApp.dir/NestedSquaresTest.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ClipperApp.dir/NestedSquaresTest.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/NestedSquaresTest.cpp -o CMakeFiles/ClipperApp.dir/NestedSquaresTest.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/NestedSquaresTest.cpp -o CMakeFiles/ClipperApp.dir/NestedSquaresTest.cpp.s
 
 # Object files for target ClipperApp
 ClipperApp_OBJECTS = \
@@ -253,7 +253,7 @@ ClipperApp: CMakeFiles/ClipperApp.dir/IrregularPolygonTest.cpp.o
 ClipperApp: CMakeFiles/ClipperApp.dir/NestedSquaresTest.cpp.o
 ClipperApp: CMakeFiles/ClipperApp.dir/build.make
 ClipperApp: CMakeFiles/ClipperApp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable ClipperApp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable ClipperApp"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ClipperApp.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -265,6 +265,6 @@ CMakeFiles/ClipperApp.dir/clean:
 .PHONY : CMakeFiles/ClipperApp.dir/clean
 
 CMakeFiles/ClipperApp.dir/depend:
-	cd /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/build /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/build /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/build/CMakeFiles/ClipperApp.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/build /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/build /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/build/CMakeFiles/ClipperApp.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/ClipperApp.dir/depend
 

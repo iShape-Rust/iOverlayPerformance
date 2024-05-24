@@ -1,5 +1,5 @@
 CMakeFiles/ClipperApp.dir/main.cpp.o: \
-  /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/main.cpp \
+  /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/main.cpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/iostream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__assert \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__config \
@@ -876,8 +876,8 @@ CMakeFiles/ClipperApp.dir/main.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/pointer_to_binary_function.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/pointer_to_unary_function.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/unary_negate.h \
-  /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/CheckerboardTest.h \
-  /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/Clipper2Lib/include/clipper2/clipper.core.h \
+  /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/CheckerboardTest.h \
+  /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/Clipper2Lib/include/clipper2/clipper.core.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/numeric \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__numeric/accumulate.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__numeric/adjacent_difference.h \
@@ -891,12 +891,12 @@ CMakeFiles/ClipperApp.dir/main.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__numeric/pstl_reduce.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__numeric/transform_exclusive_scan.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__numeric/transform_inclusive_scan.h \
-  /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/Clipper2Lib/include/clipper2/clipper.version.h \
-  /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/Clipper2Lib/include/clipper2/clipper.engine.h \
+  /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/Clipper2Lib/include/clipper2/clipper.version.h \
+  /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/Clipper2Lib/include/clipper2/clipper.engine.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/queue \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/deque \
-  /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/LinesNetTest.h \
-  /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/NotOverlapTest.h \
-  /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/IrregularPolygonTest.h \
-  /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/WindowsTest.h \
-  /Users/nailsharipov/Projects/Swift_Shape/PerformanceApp/ClipperApp/NestedSquaresTest.h
+  /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/LinesNetTest.h \
+  /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/NotOverlapTest.h \
+  /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/IrregularPolygonTest.h \
+  /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/WindowsTest.h \
+  /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/NestedSquaresTest.h
