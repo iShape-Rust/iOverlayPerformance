@@ -1,6 +1,5 @@
-use std::f64::consts::PI;
-use i_float::point::IntPoint;
-use i_shape::int::path::IntPath;
+use i_overlay::i_float::point::IntPoint;
+use i_overlay::i_shape::int::path::IntPath;
 
 pub(super) struct Util;
 
@@ -26,23 +25,6 @@ impl Util {
         result
     }
 
-    pub(super) fn irregular_polygon(radius: f64, angle: f64, n: usize) -> IntPath {
-        let mut result = Vec::with_capacity(n);
-        let da: f64 = PI * 0.7;
-        let mut a: f64 = angle;
-        let r = 1024.0 * radius;
-        for _ in 0..n {
-            let sc = a.sin_cos();
-
-            let x = r * sc.1;
-            let y = r * sc.0;
-
-            result.push(IntPoint::new(x as i32, y as i32));
-            a += da;
-        }
-
-        result
-    }
 
     pub(super) fn many_windows(start: IntPoint, a: i32, b: i32, offset: i32, n: usize) -> (Vec<IntPath>, Vec<IntPath>) {
         let mut boundaries = Vec::with_capacity(n * n);
@@ -148,6 +130,42 @@ impl Util {
                 IntPoint::new(-s, y),
                 IntPoint::new(s, y),
                 IntPoint::new(s, y - h),
+                IntPoint::new(-s, y - h),
+            ];
+            result.push(path);
+            y += a;
+        }
+
+        result
+    }
+
+    pub(super) fn saw_lines_x(a: i32, n: usize) -> Vec<IntPath> {
+        let w = a / 2;
+        let s = a * (n as i32) / 2;
+        let mut x = -s + w / 2;
+        let mut result = Vec::with_capacity(n);
+        for _ in 0..n {
+            let path: IntPath = vec![
+                IntPoint::new(x, -s),
+                IntPoint::new(x, s),
+                IntPoint::new(x + w, -s),
+            ];
+            result.push(path);
+            x += a;
+        }
+
+        result
+    }
+
+    pub(super) fn saw_lines_y(a: i32, n: usize) -> Vec<IntPath> {
+        let h = a / 2;
+        let s = a * (n as i32) / 2;
+        let mut y = -s + h / 2;
+        let mut result = Vec::with_capacity(n);
+        for _ in 0..n {
+            let path: IntPath = vec![
+                IntPoint::new(-s, y),
+                IntPoint::new(s, y),
                 IntPoint::new(-s, y - h),
             ];
             result.push(path);

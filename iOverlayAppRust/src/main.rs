@@ -1,13 +1,13 @@
 use std::env;
 use std::collections::HashMap;
 use i_overlay::core::overlay_rule::OverlayRule;
-use crate::test::nested_squares_test::NestedSquaresTest;
-use crate::test::lines_net_test::LinesNetTest;
-use crate::test::not_overlap_test::NotOverlapTest;
-
-use crate::test::checkerboard_test::CheckerboardTest;
-use crate::test::irregular_polygon_test::IrregularPolygonTest;
-use crate::test::windows_test::WindowsTest;
+use i_overlay::core::solver::{MultithreadOptions, Solver, Strategy};
+use crate::test::test_0_checkerboard::CheckerboardTest;
+use crate::test::test_1_not_overlap::NotOverlapTest;
+use crate::test::test_2_lines_net::LinesNetTest;
+use crate::test::test_3_saw_test::SawTest;
+use crate::test::test_4_windows::WindowsTest;
+use crate::test::test_5_nested_squares::NestedSquaresTest;
 
 mod test;
 
@@ -29,30 +29,48 @@ fn main() {
         }
     }
 
+    #[cfg(debug_assertions)]
+    {
+        if args_map.is_empty() {
+            args_map.insert("test".to_string(), "0".to_string());
+            args_map.insert("count".to_string(), "3".to_string());
+        }
+    }
+
     let test_key = args_map.get("test").expect("Test number is not set");
     let count_key = args_map.get("count").expect("Count is not set");
+    let multithreading_key = args_map.get("multithreading").expect("Multithreading is not set");
 
     let test: usize = test_key.parse().expect("Unable to parse test as an integer");
     let count: usize = count_key.parse().expect("Unable to parse count as an integer");
+    let multithreading: bool = multithreading_key.parse().expect("Unable to parse multithreading as an boolean");
+
+    let multithreading = if multithreading {
+        Some(MultithreadOptions::default())
+    } else {
+        None
+    };
+
+    let solver = Solver { strategy: Strategy::Auto, multithreading};
 
     match test {
         0 => {
-            CheckerboardTest::run(count, OverlayRule::Xor);
+            CheckerboardTest::run(count, OverlayRule::Xor, solver);
         }
         1 => {
-            LinesNetTest::run(count, OverlayRule::Intersect)
+            NotOverlapTest::run(count, OverlayRule::Xor, solver);
         }
         2 => {
-            NotOverlapTest::run(count);
+            LinesNetTest::run(count, OverlayRule::Intersect, solver)
         }
         3 => {
-            IrregularPolygonTest::run(count, OverlayRule::Intersect);
+            SawTest::run(count, OverlayRule::Intersect, solver);
         }
         4 => {
-            WindowsTest::run(count, OverlayRule::Difference);
+            WindowsTest::run(count, OverlayRule::Difference, solver);
         }
         5 => {
-            NestedSquaresTest::run(count, OverlayRule::Union);
+            NestedSquaresTest::run(count, OverlayRule::Union, solver);
         }
         _ => {
             println!("Test is not found");
