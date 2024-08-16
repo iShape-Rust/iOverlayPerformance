@@ -82,7 +82,7 @@ std::pair<Paths64, Paths64> manyWindows(Point64 start, long long a, long long b,
     return {boundaries, holes};
 }
 
-std::tuple<Paths64, Paths64> concentricSquares(int a, int n) {
+std::pair<Paths64, Paths64> concentricSquares(int a, int n) {
     Paths64 vert;
     vert.reserve(2 * n);
     Paths64 horz;
@@ -128,7 +128,7 @@ std::tuple<Paths64, Paths64> concentricSquares(int a, int n) {
         r += s;
     }
 
-    return std::make_tuple(vert, horz);
+    return {vert, horz};
 }
 
 Paths64 manyLinesX(long long a, int n) {
@@ -173,5 +173,43 @@ Paths64 manyLinesY(long long a, int n) {
     return lines;
 }
 
+Paths64 sawLinesX(long long a, int n) {
+    Paths64 lines;
+    lines.reserve(n);
+    long long w = a / 2;
+    long long s = a * n / 2;
+    long long x = -s + w / 2;
 
+    for (int i = 0; i < n; ++i) {
+        Path64 line = {
+                {x,     -s},
+                {x,     s},
+                {x + w, -s}
+        };
+        lines.push_back(line);
+        x += a;
+    }
+
+    return lines;
+}
+
+Paths64 sawLinesY(long long a, int n) {
+    Paths64 lines;
+    lines.reserve(n);
+    long long h = a / 2;
+    long long s = a * n / 2;
+    long long y = -s + h / 2;
+
+    for (int i = 0; i < n; ++i) {
+        Path64 line = {
+                {-s, y},
+                {s,  y},
+                {-s, y - h}
+        };
+        lines.push_back(line);
+        y += a;
+    }
+
+    return lines;
+}
 

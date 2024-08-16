@@ -1,25 +1,61 @@
-//#include <iostream>
-//#include "NotOverlapTest.h"
-//#include "CheckerboardTest.h"
-//
-//int main() {
-//    std::cout << "Start test" << std::endl;
-////    NotOverlapTest test;
-//    CheckerboardTest test;
-//    test.run();
-//    return 0;
-//}
-
 #include <iostream>
 #include <string>
 #include <map>
 #include <cstdlib>
-#include "CheckerboardTest.h"
-#include "LinesNetTest.h"
-#include "NotOverlapTest.h"
-#include "IrregularPolygonTest.h"
-#include "WindowsTest.h"
-#include "NestedSquaresTest.h"
+#include "test_0_checkerboard.h"
+#include "test_1_not_overlap.h"
+#include "test_2_lines_net.h"
+#include "test_3_saw.h"
+#include "test_4_windows.h"
+#include "test_5_nested_squares.h"
+
+void run_test_0() {
+    std::cout << "run Checkerboard test\n";
+    for (int i = 1; i <11; ++i) {
+        int n = 1 << i;
+        CheckerboardTest::run(n, ClipType::Xor);
+    }
+}
+
+void run_test_1() {
+    std::cout << "run NotOverlap test\n";
+    for (int i = 1; i <11; ++i) {
+        int n = 1 << i;
+        NotOverlapTest::run(n, ClipType::Xor);
+    }
+}
+
+void run_test_2() {
+    std::cout << "run LinesNet test\n";
+    for (int i = 1; i <11; ++i) {
+        int n = 1 << i;
+        LinesNetTest::run(n, ClipType::Intersection);
+    }
+}
+
+void run_test_3() {
+    std::cout << "run Saw test\n";
+    for (int i = 1; i <11; ++i) {
+        int n = 1 << i;
+        SawTest::run(n, ClipType::Intersection);
+    }
+}
+
+void run_test_4() {
+    std::cout << "run Windows test\n";
+    for (int i = 1; i <11; ++i) {
+        int n = 1 << i;
+        WindowsTest::run(n, ClipType::Difference);
+    }
+}
+
+void run_test_5() {
+    std::cout << "run NestedSquares test\n";
+    for (int i = 1; i <12; ++i) {
+        int n = 1 << i;
+        NestedSquaresTest::run(n, ClipType::Union);
+    }
+}
 
 int main(int argc, char* argv[]) {
     std::map<std::string, std::string> argsMap;
@@ -39,32 +75,31 @@ int main(int argc, char* argv[]) {
         }
     }
 
-    if (argsMap.find("test") == argsMap.end() || argsMap.find("count") == argsMap.end()) {
+    if (argsMap.find("test") == argsMap.end()) {
         std::cerr << "Test number or count is not set\n";
         std::exit(1);
     }
 
     int test = std::stoi(argsMap["test"]);
-    int count = std::stoi(argsMap["count"]);
 
     switch (test) {
         case 0:
-            CheckerboardTest::run(count, ClipType::Xor);
+            run_test_0();
             break;
         case 1:
-            LinesNetTest::run(count, ClipType::Intersection);
+            run_test_1();
             break;
         case 2:
-            NotOverlapTest::run(count);
+            run_test_2();
             break;
         case 3:
-            IrregularPolygonTest::run(count, ClipType::Intersection);
+            run_test_3();
             break;
         case 4:
-            WindowsTest::run(count, ClipType::Difference);
+            run_test_4();
             break;
         case 5:
-            NestedSquaresTest::run(count, ClipType::Union);
+            run_test_5();
             break;
         default:
             std::cout << "Test is not found\n";

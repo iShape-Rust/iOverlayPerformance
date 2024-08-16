@@ -5,7 +5,7 @@ use i_overlay::core::solver::{MultithreadOptions, Solver, Strategy};
 use crate::test::test_0_checkerboard::CheckerboardTest;
 use crate::test::test_1_not_overlap::NotOverlapTest;
 use crate::test::test_2_lines_net::LinesNetTest;
-use crate::test::test_3_saw_test::SawTest;
+use crate::test::test_3_saw::SawTest;
 use crate::test::test_4_windows::WindowsTest;
 use crate::test::test_5_nested_squares::NestedSquaresTest;
 
@@ -126,7 +126,7 @@ fn run_test_2(solver: Solver) {
     println!("run LinesNet test");
     for i in 1..12 {
         let n = 1 << i;
-        LinesNetTest::run(n, OverlayRule::Xor, solver)
+        LinesNetTest::run(n, OverlayRule::Intersect, solver)
     }
 }
 
@@ -134,7 +134,7 @@ fn run_test_3(solver: Solver) {
     println!("run Saw test");
     for i in 1..12 {
         let n = 1 << i;
-        SawTest::run(n, OverlayRule::Xor, solver)
+        SawTest::run(n, OverlayRule::Intersect, solver)
     }
 }
 
@@ -142,7 +142,7 @@ fn run_test_4(solver: Solver) {
     println!("run Windows test");
     for i in 1..12 {
         let n = 1 << i;
-        WindowsTest::run(n, OverlayRule::Xor, solver)
+        WindowsTest::run(n, OverlayRule::Difference, solver)
     }
 }
 
@@ -150,6 +150,6 @@ fn run_test_5(solver: Solver) {
     println!("run NestedSquares test");
     for i in 1..19 {
         let n = 1 << i;
-        NestedSquaresTest::run(n, OverlayRule::Xor, solver)
+        NestedSquaresTest::run(n, OverlayRule::Union, solver)
     }
 }
