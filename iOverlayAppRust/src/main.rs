@@ -38,12 +38,12 @@ fn main() {
     }
 
     let test_key = args_map.get("test").expect("Test number is not set");
-    let count_key = args_map.get("count").expect("Count is not set");
     let multithreading_key = args_map.get("multithreading").expect("Multithreading is not set");
+    let complex_key = args_map.get("complex").expect("Complex is not set");
 
     let test: usize = test_key.parse().expect("Unable to parse test as an integer");
-    let count: usize = count_key.parse().expect("Unable to parse count as an integer");
     let multithreading: bool = multithreading_key.parse().expect("Unable to parse multithreading as an boolean");
+    let complex: bool = complex_key.parse().expect("Unable to parse complex as an boolean");
 
     let multithreading = if multithreading {
         Some(MultithreadOptions::default())
@@ -53,27 +53,103 @@ fn main() {
 
     let solver = Solver { strategy: Strategy::Auto, multithreading};
 
-    match test {
-        0 => {
-            CheckerboardTest::run(count, OverlayRule::Xor, solver);
+    if complex {
+        match test {
+            0 => {
+                run_test_0(solver);
+            }
+            1 => {
+                run_test_1(solver);
+            }
+            2 => {
+                run_test_2(solver)
+            }
+            3 => {
+                run_test_3(solver);
+            }
+            4 => {
+                run_test_4(solver);
+            }
+            5 => {
+                run_test_5(solver);
+            }
+            _ => {
+                println!("Test is not found");
+            }
         }
-        1 => {
-            NotOverlapTest::run(count, OverlayRule::Xor, solver);
+    } else {
+        let count_key = args_map.get("count").expect("Count is not set");
+        let count: usize = count_key.parse().expect("Unable to parse count as an integer");
+        match test {
+            0 => {
+                CheckerboardTest::run(count, OverlayRule::Xor, solver);
+            }
+            1 => {
+                NotOverlapTest::run(count, OverlayRule::Xor, solver);
+            }
+            2 => {
+                LinesNetTest::run(count, OverlayRule::Intersect, solver)
+            }
+            3 => {
+                SawTest::run(count, OverlayRule::Intersect, solver);
+            }
+            4 => {
+                WindowsTest::run(count, OverlayRule::Difference, solver);
+            }
+            5 => {
+                NestedSquaresTest::run(count, OverlayRule::Union, solver);
+            }
+            _ => {
+                println!("Test is not found");
+            }
         }
-        2 => {
-            LinesNetTest::run(count, OverlayRule::Intersect, solver)
-        }
-        3 => {
-            SawTest::run(count, OverlayRule::Intersect, solver);
-        }
-        4 => {
-            WindowsTest::run(count, OverlayRule::Difference, solver);
-        }
-        5 => {
-            NestedSquaresTest::run(count, OverlayRule::Union, solver);
-        }
-        _ => {
-            println!("Test is not found");
-        }
+    }
+}
+
+fn run_test_0(solver: Solver) {
+    println!("run Checkerboard test");
+    for i in 1..12 {
+        let n = 1 << i;
+        CheckerboardTest::run(n, OverlayRule::Xor, solver)
+    }
+}
+
+fn run_test_1(solver: Solver) {
+    println!("run NotOverlap test");
+    for i in 1..12 {
+        let n = 1 << i;
+        NotOverlapTest::run(n, OverlayRule::Xor, solver)
+    }
+}
+
+fn run_test_2(solver: Solver) {
+    println!("run LinesNet test");
+    for i in 1..12 {
+        let n = 1 << i;
+        LinesNetTest::run(n, OverlayRule::Xor, solver)
+    }
+}
+
+fn run_test_3(solver: Solver) {
+    println!("run Saw test");
+    for i in 1..12 {
+        let n = 1 << i;
+        SawTest::run(n, OverlayRule::Xor, solver)
+    }
+}
+
+fn run_test_4(solver: Solver) {
+    println!("run Windows test");
+    for i in 1..12 {
+        let n = 1 << i;
+        WindowsTest::run(n, OverlayRule::Xor, solver)
+    }
+}
+
+fn run_test_5(solver: Solver) {
+    println!("run NestedSquares test");
+    for i in 1..19 {
+        let n = 1 << i;
+        NestedSquaresTest::run(n, OverlayRule::Xor, solver)
     }
 }
