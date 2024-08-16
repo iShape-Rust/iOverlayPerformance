@@ -14,8 +14,6 @@ using namespace Clipper2Lib;
 
 // A series of concentric squares, each progressively larger than the last.
 void NestedSquaresTest::run(int n, ClipType clipType) {
-    std::cout << "Start NestedSquares Test\n";
-
     auto pair = concentricSquares(4, n);
 
     int it_count = std::max(500 / n, 1);
@@ -31,7 +29,7 @@ void NestedSquaresTest::run(int n, ClipType clipType) {
     double time = elapsed.count() / static_cast<double>(sq_it_count);
 
     int count = n;
-    double count_log = log2(count);
+    double count_log = log10(count);
     double time_log = log10(time);
 
     std::cout << n << "(" << std::fixed << std::setprecision(1) << count_log << ")"

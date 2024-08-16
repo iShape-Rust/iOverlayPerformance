@@ -29,7 +29,7 @@ void NotOverlapTest::run(int n, ClipType clipType) {
     double time = elapsed.count() / static_cast<double>(sq_it_count);
 
     int count = n * n + (n - 1) * (n - 1);
-    double count_log = log2(count);
+    double count_log = log10(count);
     double time_log = log10(time);
 
     std::cout << n << "(" << std::fixed << std::setprecision(1) << count_log << ")"

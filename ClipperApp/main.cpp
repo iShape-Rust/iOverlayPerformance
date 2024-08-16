@@ -27,7 +27,7 @@ void run_test_1() {
 
 void run_test_2() {
     std::cout << "run LinesNet test\n";
-    for (int i = 1; i <11; ++i) {
+    for (int i = 1; i <12; ++i) {
         int n = 1 << i;
         LinesNetTest::run(n, ClipType::Intersection);
     }
@@ -35,7 +35,7 @@ void run_test_2() {
 
 void run_test_3() {
     std::cout << "run Saw test\n";
-    for (int i = 1; i <11; ++i) {
+    for (int i = 1; i <12; ++i) {
         int n = 1 << i;
         SawTest::run(n, ClipType::Intersection);
     }
@@ -51,7 +51,7 @@ void run_test_4() {
 
 void run_test_5() {
     std::cout << "run NestedSquares test\n";
-    for (int i = 1; i <12; ++i) {
+    for (int i = 1; i <13; ++i) {
         int n = 1 << i;
         NestedSquaresTest::run(n, ClipType::Union);
     }
