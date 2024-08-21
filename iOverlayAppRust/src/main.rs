@@ -32,8 +32,10 @@ fn main() {
     #[cfg(debug_assertions)]
     {
         if args_map.is_empty() {
+            args_map.insert("multithreading".to_string(), "false".to_string());
+            args_map.insert("complex".to_string(), "false".to_string());
             args_map.insert("test".to_string(), "0".to_string());
-            args_map.insert("count".to_string(), "3".to_string());
+            args_map.insert("count".to_string(), "1000".to_string());
         }
     }
 
