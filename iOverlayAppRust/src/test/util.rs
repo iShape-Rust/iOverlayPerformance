@@ -1,4 +1,7 @@
+use std::f64::consts::PI;
+use i_overlay::i_float::f64_point::F64Point;
 use i_overlay::i_float::point::IntPoint;
+use i_overlay::i_shape::f64::shape::F64Path;
 use i_overlay::i_shape::int::path::IntPath;
 
 pub(super) struct Util;
@@ -139,39 +142,43 @@ impl Util {
         result
     }
 
-    pub(super) fn saw_lines_x(a: i32, n: usize) -> Vec<IntPath> {
-        let w = a / 2;
-        let s = a * (n as i32) / 2;
-        let mut x = -s + w / 2;
-        let mut result = Vec::with_capacity(n);
-        for _ in 0..n {
-            let path: IntPath = vec![
-                IntPoint::new(x, -s),
-                IntPoint::new(x, s),
-                IntPoint::new(x + w, -s),
-            ];
-            result.push(path);
-            x += a;
+    pub(super) fn spiral(count: usize, radius: f64) -> F64Path {
+        let mut a_path = Vec::with_capacity(4 * count);
+        let mut b_path = Vec::with_capacity(2 * count);
+
+        let mut a: f64 = 0.0;
+        let mut r = radius;
+        let w = 0.1 * radius;
+
+        let c0 = F64Point { x: 0.0, y: 0.0 };
+        let mut p0 = c0;
+
+        for i in 0..count {
+            let (sy, sx) = a.sin_cos();
+
+            let rr = if i % 2 == 0 {
+                r + 0.2 * radius
+            } else {
+                r + 0.2 * radius
+            };
+
+            let p = F64Point { x: rr * sx, y: rr * sy };
+            let n = (p - p0).normalize();
+            let t = F64Point { x: w * -n.y, y: w * n.x };
+
+            a_path.push(p0 + t);
+            a_path.push(p + t);
+            b_path.push(p0 - t);
+            b_path.push(p - t);
+
+            a += radius / r;
+            r = radius * (1.0 + a / (2.0 * PI));
+            p0 = p;
         }
 
-        result
-    }
+        b_path.reverse();
+        a_path.append(&mut b_path);
 
-    pub(super) fn saw_lines_y(a: i32, n: usize) -> Vec<IntPath> {
-        let h = a / 2;
-        let s = a * (n as i32) / 2;
-        let mut y = -s + h / 2;
-        let mut result = Vec::with_capacity(n);
-        for _ in 0..n {
-            let path: IntPath = vec![
-                IntPoint::new(-s, y),
-                IntPoint::new(s, y),
-                IntPoint::new(-s, y - h),
-            ];
-            result.push(path);
-            y += a;
-        }
-
-        result
+        a_path
     }
 }

@@ -15,7 +15,7 @@
 #include <string>
 #include "include/clipper2/clipper.core.h"
 
-namespace Clipper2Lib 
+namespace Clipper2Lib
 {
 
   namespace detail

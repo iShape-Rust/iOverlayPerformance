@@ -16,5 +16,6 @@ Paths64 manyLinesX(long long a, int n);
 Paths64 manyLinesY(long long a, int n);
 Paths64 sawLinesX(long long a, int n);
 Paths64 sawLinesY(long long a, int n);
+PathD spiral(int count, int radius);
 
 #endif //CLIPPERAPP_UTIL_H

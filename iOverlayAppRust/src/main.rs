@@ -1,11 +1,11 @@
 use std::env;
 use std::collections::HashMap;
 use i_overlay::core::overlay_rule::OverlayRule;
-use i_overlay::core::solver::{MultithreadOptions, Solver, Strategy};
+use i_overlay::core::solver::{MultithreadOptions, Precision, Solver, Strategy};
 use crate::test::test_0_checkerboard::CheckerboardTest;
 use crate::test::test_1_not_overlap::NotOverlapTest;
 use crate::test::test_2_lines_net::LinesNetTest;
-use crate::test::test_3_saw::SawTest;
+use crate::test::test_3_spiral::SpiralTest;
 use crate::test::test_4_windows::WindowsTest;
 use crate::test::test_5_nested_squares::NestedSquaresTest;
 
@@ -34,8 +34,8 @@ fn main() {
         if args_map.is_empty() {
             args_map.insert("multithreading".to_string(), "false".to_string());
             args_map.insert("complex".to_string(), "false".to_string());
-            args_map.insert("test".to_string(), "0".to_string());
-            args_map.insert("count".to_string(), "1000".to_string());
+            args_map.insert("test".to_string(), "3".to_string());
+            args_map.insert("count".to_string(), "524288".to_string());
         }
     }
 
@@ -53,7 +53,7 @@ fn main() {
         None
     };
 
-    let solver = Solver { strategy: Strategy::Auto, multithreading};
+    let solver = Solver { strategy: Strategy::Auto, precision: Precision::Auto, multithreading};
 
     if complex {
         match test {
@@ -67,7 +67,7 @@ fn main() {
                 run_test_2(solver)
             }
             3 => {
-                run_test_3(solver);
+                run_test_3();
             }
             4 => {
                 run_test_4(solver);
@@ -87,19 +87,19 @@ fn main() {
                 CheckerboardTest::run(count, OverlayRule::Xor, solver);
             }
             1 => {
-                NotOverlapTest::run(count, OverlayRule::Xor, solver);
+                NotOverlapTest::run(count, OverlayRule::Union, solver);
             }
             2 => {
                 LinesNetTest::run(count, OverlayRule::Intersect, solver)
             }
             3 => {
-                SawTest::run(count, OverlayRule::Intersect, solver);
+                SpiralTest::run(count);
             }
             4 => {
                 WindowsTest::run(count, OverlayRule::Difference, solver);
             }
             5 => {
-                NestedSquaresTest::run(count, OverlayRule::Union, solver);
+                NestedSquaresTest::run(count, OverlayRule::Xor, solver);
             }
             _ => {
                 println!("Test is not found");
@@ -132,11 +132,11 @@ fn run_test_2(solver: Solver) {
     }
 }
 
-fn run_test_3(solver: Solver) {
-    println!("run Saw test");
-    for i in 1..12 {
+fn run_test_3() {
+    println!("run Spiral test");
+    for i in 1..20 {
         let n = 1 << i;
-        SawTest::run(n, OverlayRule::Intersect, solver)
+        SpiralTest::run(n)
     }
 }
 

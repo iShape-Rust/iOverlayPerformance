@@ -13,16 +13,18 @@
 using namespace Clipper2Lib;
 
 // A grid is formed by the intersection of a set of vertical and horizontal lines.
-void SawTest::run(int n, ClipType clipType) {
-    auto subj = sawLinesX(20, n);
-    auto clip = sawLinesY(20, n);
+void SawTest::run(int n) {
+    PathD sp = spiral(n, 100);
+    PathsD subj;
+    subj.push_back(sp);
+    PathsD clip;
 
-    int it_count = std::max(500 / n, 1);
+    int it_count = std::max(1000 / n, 1);
     int sq_it_count = it_count * it_count;
     auto start = std::chrono::high_resolution_clock::now();
 
     for (int i = 0; i < sq_it_count; ++i) {
-        Paths64 solution = BooleanOp(clipType, FillRule::NonZero, subj, clip);
+        auto solution = BooleanOp(ClipType::Union, FillRule::NonZero, subj, clip, 2);
     }
 
     auto end = std::chrono::high_resolution_clock::now();

@@ -213,3 +213,50 @@ Paths64 sawLinesY(long long a, int n) {
     return lines;
 }
 
+PathD spiral(int count, int radius) {
+    PathD a_path;
+    PathD b_path;
+
+    a_path.reserve(4 * count);
+    b_path.reserve(2 * count);
+
+    double a = 0.0;
+    double r = radius;
+    double w = 0.1 * radius;
+
+    Point<double> p0;
+    p0.x = 0.0;
+    p0.y = 0.0;
+
+    for (int i = 0; i < count; ++i) {
+        double sx = cos(a);
+        double sy = sin(a);
+
+        PointD p{r * sx, r * sy};
+        PointD v{p.x - p0.x, p.y - p0.y};
+
+        // Normalize vector
+        double l = sqrt(v.x * v.x + v.y * v.y);
+        PointD n{v.x / l, v.y / l};
+
+        PointD t{-w * n.y, w * n.x};
+
+        a_path.push_back(p0 + t);
+        a_path.push_back(p + t);
+        b_path.push_back(p0 - t);
+        b_path.push_back(p - t);
+
+        a += radius / r;
+        r = radius * (1.0 + a / (2.0 * PI));
+        p0 = p;
+    }
+
+    // Reverse b_path
+    std::reverse(b_path.begin(), b_path.end());
+
+    // Append b_path to a_path
+    a_path.insert(a_path.end(), b_path.begin(), b_path.end());
+
+    return a_path;
+}
+

@@ -11,7 +11,7 @@
 
 void run_test_0() {
     std::cout << "run Checkerboard test\n";
-    for (int i = 1; i <11; ++i) {
+    for (int i = 1; i <12; ++i) {
         int n = 1 << i;
         CheckerboardTest::run(n, ClipType::Xor);
     }
@@ -19,9 +19,9 @@ void run_test_0() {
 
 void run_test_1() {
     std::cout << "run NotOverlap test\n";
-    for (int i = 1; i <11; ++i) {
+    for (int i = 1; i <12; ++i) {
         int n = 1 << i;
-        NotOverlapTest::run(n, ClipType::Xor);
+        NotOverlapTest::run(n, ClipType::Union);
     }
 }
 
@@ -35,9 +35,9 @@ void run_test_2() {
 
 void run_test_3() {
     std::cout << "run Saw test\n";
-    for (int i = 1; i <12; ++i) {
+    for (int i = 1; i <19; ++i) {
         int n = 1 << i;
-        SawTest::run(n, ClipType::Intersection);
+        SawTest::run(n);
     }
 }
 
