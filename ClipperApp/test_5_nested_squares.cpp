@@ -21,18 +21,14 @@ void NestedSquaresTest::run(int n, ClipType clipType) {
     auto start = std::chrono::high_resolution_clock::now();
 
     for (int i = 0; i < sq_it_count; ++i) {
-        Paths64 solution = BooleanOp(clipType, FillRule::NonZero, pair.first, pair.second);
+        Paths64 solution = BooleanOp(clipType, FillRule::EvenOdd, pair.first, pair.second);
     }
 
     auto end = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> elapsed = end - start;
     double time = elapsed.count() / static_cast<double>(sq_it_count);
 
-    int count = n;
-    double count_log = log10(count);
-    double time_log = log10(time);
+    int count = 2 * n;
 
-    std::cout << n << "(" << std::fixed << std::setprecision(1) << count_log << ")"
-              << "     - " << std::fixed << std::setprecision(6) << time << "("
-              << std::fixed << std::setprecision(1) << time_log << ")\n";
+    std::cout << count << "     - " << std::fixed << std::setprecision(6) << time << "\n";
 }

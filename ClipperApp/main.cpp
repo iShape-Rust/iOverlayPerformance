@@ -43,7 +43,7 @@ void run_test_3() {
 
 void run_test_4() {
     std::cout << "run Windows test\n";
-    for (int i = 1; i <11; ++i) {
+    for (int i = 1; i <12; ++i) {
         int n = 1 << i;
         WindowsTest::run(n, ClipType::Difference);
     }
@@ -51,9 +51,9 @@ void run_test_4() {
 
 void run_test_5() {
     std::cout << "run NestedSquares test\n";
-    for (int i = 1; i <13; ++i) {
+    for (int i = 1; i <16; ++i) {
         int n = 1 << i;
-        NestedSquaresTest::run(n, ClipType::Union);
+        NestedSquaresTest::run(n, ClipType::Xor);
     }
 }
 

@@ -153,6 +153,6 @@ fn run_test_5(solver: Solver) {
     println!("run NestedSquares test");
     for i in 1..19 {
         let n = 1 << i;
-        NestedSquaresTest::run(n, OverlayRule::Union, solver)
+        NestedSquaresTest::run(n, OverlayRule::Xor, solver)
     }
 }
