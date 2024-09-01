@@ -897,6 +897,6 @@ CMakeFiles/ClipperApp.dir/main.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/deque \
   /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/test_1_not_overlap.h \
   /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/test_2_lines_net.h \
-  /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/test_3_saw.h \
+  /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/test_3_spiral.h \
   /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/test_4_windows.h \
   /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/test_5_nested_squares.h

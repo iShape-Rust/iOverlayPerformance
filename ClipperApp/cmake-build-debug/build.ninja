@@ -105,8 +105,8 @@ build CMakeFiles/ClipperApp.dir/test_2_lines_net.cpp.o: CXX_COMPILER__ClipperApp
   OBJECT_DIR = CMakeFiles/ClipperApp.dir
   OBJECT_FILE_DIR = CMakeFiles/ClipperApp.dir
 
-build CMakeFiles/ClipperApp.dir/test_3_saw.cpp.o: CXX_COMPILER__ClipperApp_unscanned_Debug /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/test_3_saw.cpp || cmake_object_order_depends_target_ClipperApp
-  DEP_FILE = CMakeFiles/ClipperApp.dir/test_3_saw.cpp.o.d
+build CMakeFiles/ClipperApp.dir/test_3_spiral.cpp.o: CXX_COMPILER__ClipperApp_unscanned_Debug /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/test_3_spiral.cpp || cmake_object_order_depends_target_ClipperApp
+  DEP_FILE = CMakeFiles/ClipperApp.dir/test_3_spiral.cpp.o.d
   FLAGS = -g -std=gnu++17 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
   INCLUDES = -I/Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/Clipper2Lib
   OBJECT_DIR = CMakeFiles/ClipperApp.dir
@@ -134,7 +134,7 @@ build CMakeFiles/ClipperApp.dir/test_5_nested_squares.cpp.o: CXX_COMPILER__Clipp
 #############################################
 # Link the executable ClipperApp
 
-build ClipperApp: CXX_EXECUTABLE_LINKER__ClipperApp_Debug CMakeFiles/ClipperApp.dir/main.cpp.o CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.engine.cpp.o CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.offset.cpp.o CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.rectclip.cpp.o CMakeFiles/ClipperApp.dir/Util.cpp.o CMakeFiles/ClipperApp.dir/test_0_checkerboard.cpp.o CMakeFiles/ClipperApp.dir/test_1_not_overlap.cpp.o CMakeFiles/ClipperApp.dir/test_2_lines_net.cpp.o CMakeFiles/ClipperApp.dir/test_3_saw.cpp.o CMakeFiles/ClipperApp.dir/test_4_windows.cpp.o CMakeFiles/ClipperApp.dir/test_5_nested_squares.cpp.o
+build ClipperApp: CXX_EXECUTABLE_LINKER__ClipperApp_Debug CMakeFiles/ClipperApp.dir/main.cpp.o CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.engine.cpp.o CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.offset.cpp.o CMakeFiles/ClipperApp.dir/Clipper2Lib/src/clipper.rectclip.cpp.o CMakeFiles/ClipperApp.dir/Util.cpp.o CMakeFiles/ClipperApp.dir/test_0_checkerboard.cpp.o CMakeFiles/ClipperApp.dir/test_1_not_overlap.cpp.o CMakeFiles/ClipperApp.dir/test_2_lines_net.cpp.o CMakeFiles/ClipperApp.dir/test_3_spiral.cpp.o CMakeFiles/ClipperApp.dir/test_4_windows.cpp.o CMakeFiles/ClipperApp.dir/test_5_nested_squares.cpp.o
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk
   OBJECT_DIR = CMakeFiles/ClipperApp.dir
   POST_BUILD = :

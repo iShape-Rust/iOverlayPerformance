@@ -15,8 +15,8 @@ add_executable(ClipperApp main.cpp
         test_1_not_overlap.h
         test_2_lines_net.cpp
         test_2_lines_net.h
-        test_3_saw.h
-        test_3_saw.cpp
+        test_3_spiral.h
+        test_3_spiral.cpp
         test_4_windows.cpp
         test_4_windows.h
         test_5_nested_squares.cpp

@@ -34,8 +34,9 @@ fn main() {
         if args_map.is_empty() {
             args_map.insert("multithreading".to_string(), "false".to_string());
             args_map.insert("complex".to_string(), "false".to_string());
-            args_map.insert("test".to_string(), "3".to_string());
-            args_map.insert("count".to_string(), "524288".to_string());
+            args_map.insert("test".to_string(), 3.to_string());
+            let count = 1 << 19;
+            args_map.insert("count".to_string(), count.to_string());
         }
     }
 
@@ -134,7 +135,7 @@ fn run_test_2(solver: Solver) {
 
 fn run_test_3() {
     println!("run Spiral test");
-    for i in 1..20 {
+    for i in 1..21 {
         let n = 1 << i;
         SpiralTest::run(n)
     }

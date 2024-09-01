@@ -232,7 +232,14 @@ PathD spiral(int count, int radius) {
         double sx = cos(a);
         double sy = sin(a);
 
-        PointD p{r * sx, r * sy};
+        double rr;
+        if (i % 2 == 0) {
+            rr = r + 0.2 * radius;
+        } else {
+            rr = r - 0.2 * radius;
+        }
+
+        PointD p{rr * sx, rr * sy};
         PointD v{p.x - p0.x, p.y - p0.y};
 
         // Normalize vector

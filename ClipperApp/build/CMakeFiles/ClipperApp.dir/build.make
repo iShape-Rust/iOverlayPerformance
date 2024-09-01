@@ -181,19 +181,19 @@ CMakeFiles/ClipperApp.dir/test_2_lines_net.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ClipperApp.dir/test_2_lines_net.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/test_2_lines_net.cpp -o CMakeFiles/ClipperApp.dir/test_2_lines_net.cpp.s
 
-CMakeFiles/ClipperApp.dir/test_3_saw.cpp.o: CMakeFiles/ClipperApp.dir/flags.make
-CMakeFiles/ClipperApp.dir/test_3_saw.cpp.o: /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/test_3_saw.cpp
-CMakeFiles/ClipperApp.dir/test_3_saw.cpp.o: CMakeFiles/ClipperApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/ClipperApp.dir/test_3_saw.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ClipperApp.dir/test_3_saw.cpp.o -MF CMakeFiles/ClipperApp.dir/test_3_saw.cpp.o.d -o CMakeFiles/ClipperApp.dir/test_3_saw.cpp.o -c /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/test_3_saw.cpp
+CMakeFiles/ClipperApp.dir/test_3_spiral.cpp.o: CMakeFiles/ClipperApp.dir/flags.make
+CMakeFiles/ClipperApp.dir/test_3_spiral.cpp.o: /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/test_3_spiral.cpp
+CMakeFiles/ClipperApp.dir/test_3_spiral.cpp.o: CMakeFiles/ClipperApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/ClipperApp.dir/test_3_spiral.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ClipperApp.dir/test_3_spiral.cpp.o -MF CMakeFiles/ClipperApp.dir/test_3_spiral.cpp.o.d -o CMakeFiles/ClipperApp.dir/test_3_spiral.cpp.o -c /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/test_3_spiral.cpp
 
-CMakeFiles/ClipperApp.dir/test_3_saw.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ClipperApp.dir/test_3_saw.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/test_3_saw.cpp > CMakeFiles/ClipperApp.dir/test_3_saw.cpp.i
+CMakeFiles/ClipperApp.dir/test_3_spiral.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ClipperApp.dir/test_3_spiral.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/test_3_spiral.cpp > CMakeFiles/ClipperApp.dir/test_3_spiral.cpp.i
 
-CMakeFiles/ClipperApp.dir/test_3_saw.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ClipperApp.dir/test_3_saw.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/test_3_saw.cpp -o CMakeFiles/ClipperApp.dir/test_3_saw.cpp.s
+CMakeFiles/ClipperApp.dir/test_3_spiral.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ClipperApp.dir/test_3_spiral.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/test_3_spiral.cpp -o CMakeFiles/ClipperApp.dir/test_3_spiral.cpp.s
 
 CMakeFiles/ClipperApp.dir/test_4_windows.cpp.o: CMakeFiles/ClipperApp.dir/flags.make
 CMakeFiles/ClipperApp.dir/test_4_windows.cpp.o: /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/test_4_windows.cpp
@@ -233,7 +233,7 @@ ClipperApp_OBJECTS = \
 "CMakeFiles/ClipperApp.dir/test_0_checkerboard.cpp.o" \
 "CMakeFiles/ClipperApp.dir/test_1_not_overlap.cpp.o" \
 "CMakeFiles/ClipperApp.dir/test_2_lines_net.cpp.o" \
-"CMakeFiles/ClipperApp.dir/test_3_saw.cpp.o" \
+"CMakeFiles/ClipperApp.dir/test_3_spiral.cpp.o" \
 "CMakeFiles/ClipperApp.dir/test_4_windows.cpp.o" \
 "CMakeFiles/ClipperApp.dir/test_5_nested_squares.cpp.o"
 
@@ -248,7 +248,7 @@ ClipperApp: CMakeFiles/ClipperApp.dir/Util.cpp.o
 ClipperApp: CMakeFiles/ClipperApp.dir/test_0_checkerboard.cpp.o
 ClipperApp: CMakeFiles/ClipperApp.dir/test_1_not_overlap.cpp.o
 ClipperApp: CMakeFiles/ClipperApp.dir/test_2_lines_net.cpp.o
-ClipperApp: CMakeFiles/ClipperApp.dir/test_3_saw.cpp.o
+ClipperApp: CMakeFiles/ClipperApp.dir/test_3_spiral.cpp.o
 ClipperApp: CMakeFiles/ClipperApp.dir/test_4_windows.cpp.o
 ClipperApp: CMakeFiles/ClipperApp.dir/test_5_nested_squares.cpp.o
 ClipperApp: CMakeFiles/ClipperApp.dir/build.make

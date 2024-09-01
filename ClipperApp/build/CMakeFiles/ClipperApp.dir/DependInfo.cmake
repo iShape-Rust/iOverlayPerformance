@@ -16,7 +16,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/test_0_checkerboard.cpp" "CMakeFiles/ClipperApp.dir/test_0_checkerboard.cpp.o" "gcc" "CMakeFiles/ClipperApp.dir/test_0_checkerboard.cpp.o.d"
   "/Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/test_1_not_overlap.cpp" "CMakeFiles/ClipperApp.dir/test_1_not_overlap.cpp.o" "gcc" "CMakeFiles/ClipperApp.dir/test_1_not_overlap.cpp.o.d"
   "/Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/test_2_lines_net.cpp" "CMakeFiles/ClipperApp.dir/test_2_lines_net.cpp.o" "gcc" "CMakeFiles/ClipperApp.dir/test_2_lines_net.cpp.o.d"
-  "/Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/test_3_saw.cpp" "CMakeFiles/ClipperApp.dir/test_3_saw.cpp.o" "gcc" "CMakeFiles/ClipperApp.dir/test_3_saw.cpp.o.d"
+  "/Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/test_3_spiral.cpp" "CMakeFiles/ClipperApp.dir/test_3_spiral.cpp.o" "gcc" "CMakeFiles/ClipperApp.dir/test_3_spiral.cpp.o.d"
   "/Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/test_4_windows.cpp" "CMakeFiles/ClipperApp.dir/test_4_windows.cpp.o" "gcc" "CMakeFiles/ClipperApp.dir/test_4_windows.cpp.o.d"
   "/Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/test_5_nested_squares.cpp" "CMakeFiles/ClipperApp.dir/test_5_nested_squares.cpp.o" "gcc" "CMakeFiles/ClipperApp.dir/test_5_nested_squares.cpp.o.d"
   )

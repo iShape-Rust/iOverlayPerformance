@@ -321,29 +321,29 @@ test_2_lines_net.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ClipperApp.dir/build.make CMakeFiles/ClipperApp.dir/test_2_lines_net.cpp.s
 .PHONY : test_2_lines_net.cpp.s
 
-test_3_saw.o: test_3_saw.cpp.o
-.PHONY : test_3_saw.o
+test_3_spiral.o: test_3_spiral.cpp.o
+.PHONY : test_3_spiral.o
 
 # target to build an object file
-test_3_saw.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ClipperApp.dir/build.make CMakeFiles/ClipperApp.dir/test_3_saw.cpp.o
-.PHONY : test_3_saw.cpp.o
+test_3_spiral.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ClipperApp.dir/build.make CMakeFiles/ClipperApp.dir/test_3_spiral.cpp.o
+.PHONY : test_3_spiral.cpp.o
 
-test_3_saw.i: test_3_saw.cpp.i
-.PHONY : test_3_saw.i
+test_3_spiral.i: test_3_spiral.cpp.i
+.PHONY : test_3_spiral.i
 
 # target to preprocess a source file
-test_3_saw.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ClipperApp.dir/build.make CMakeFiles/ClipperApp.dir/test_3_saw.cpp.i
-.PHONY : test_3_saw.cpp.i
+test_3_spiral.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ClipperApp.dir/build.make CMakeFiles/ClipperApp.dir/test_3_spiral.cpp.i
+.PHONY : test_3_spiral.cpp.i
 
-test_3_saw.s: test_3_saw.cpp.s
-.PHONY : test_3_saw.s
+test_3_spiral.s: test_3_spiral.cpp.s
+.PHONY : test_3_spiral.s
 
 # target to generate assembly for a file
-test_3_saw.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ClipperApp.dir/build.make CMakeFiles/ClipperApp.dir/test_3_saw.cpp.s
-.PHONY : test_3_saw.cpp.s
+test_3_spiral.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ClipperApp.dir/build.make CMakeFiles/ClipperApp.dir/test_3_spiral.cpp.s
+.PHONY : test_3_spiral.cpp.s
 
 test_4_windows.o: test_4_windows.cpp.o
 .PHONY : test_4_windows.o
@@ -426,9 +426,9 @@ help:
 	@echo "... test_2_lines_net.o"
 	@echo "... test_2_lines_net.i"
 	@echo "... test_2_lines_net.s"
-	@echo "... test_3_saw.o"
-	@echo "... test_3_saw.i"
-	@echo "... test_3_saw.s"
+	@echo "... test_3_spiral.o"
+	@echo "... test_3_spiral.i"
+	@echo "... test_3_spiral.s"
 	@echo "... test_4_windows.o"
 	@echo "... test_4_windows.i"
 	@echo "... test_4_windows.s"

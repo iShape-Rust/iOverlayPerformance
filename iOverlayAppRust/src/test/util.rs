@@ -159,7 +159,7 @@ impl Util {
             let rr = if i % 2 == 0 {
                 r + 0.2 * radius
             } else {
-                r + 0.2 * radius
+                r - 0.2 * radius
             };
 
             let p = F64Point { x: rr * sx, y: rr * sy };

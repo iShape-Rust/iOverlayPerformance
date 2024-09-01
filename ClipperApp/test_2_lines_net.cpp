@@ -30,10 +30,6 @@ void LinesNetTest::run(int n, ClipType clipType) {
     double time = elapsed.count() / static_cast<double>(sq_it_count);
 
     int count = 2 * n;
-    double count_log = log10(count);
-    double time_log = log10(time);
 
-    std::cout << n << "(" << std::fixed << std::setprecision(1) << count_log << ")"
-              << "     - " << std::fixed << std::setprecision(6) << time << "("
-              << std::fixed << std::setprecision(1) << time_log << ")\n";
+    std::cout << count << "     - " << std::fixed << std::setprecision(6) << time << "\n";
 }

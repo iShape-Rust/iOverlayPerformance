@@ -5,7 +5,7 @@
 #include "test_0_checkerboard.h"
 #include "test_1_not_overlap.h"
 #include "test_2_lines_net.h"
-#include "test_3_saw.h"
+#include "test_3_spiral.h"
 #include "test_4_windows.h"
 #include "test_5_nested_squares.h"
 
@@ -34,10 +34,10 @@ void run_test_2() {
 }
 
 void run_test_3() {
-    std::cout << "run Saw test\n";
-    for (int i = 1; i <19; ++i) {
+    std::cout << "run Spiral test\n";
+    for (int i = 1; i <21; ++i) {
         int n = 1 << i;
-        SawTest::run(n);
+        SpiralTest::run(n);
     }
 }
 

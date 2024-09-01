@@ -1,6 +1,6 @@
-CMakeFiles/ClipperApp.dir/test_3_saw.cpp.o: \
-  /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/test_3_saw.cpp \
-  /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/test_3_saw.h \
+CMakeFiles/ClipperApp.dir/test_3_spiral.cpp.o: \
+  /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/test_3_spiral.cpp \
+  /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/test_3_spiral.h \
   /Users/nailsharipov/Projects/Rust/iShape/iOverlayPerformance/ClipperApp/Clipper2Lib/include/clipper2/clipper.core.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/cstdint \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/__assert \
