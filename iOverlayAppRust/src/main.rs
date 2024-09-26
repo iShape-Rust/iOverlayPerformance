@@ -54,7 +54,7 @@ fn main() {
         None
     };
 
-    let solver = Solver { strategy: Strategy::List, precision: Precision::Auto, multithreading};
+    let solver = Solver { strategy: Strategy::Auto, precision: Precision::Auto, multithreading};
 
     if complex {
         match test {
