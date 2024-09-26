@@ -61,10 +61,10 @@ multithreading off
 
 // Two irregular self-intersecting polygons are generated, the vertices of which are defined by a fixed radius and angle.
 impl SpiralTest {
-    pub(crate) fn run(n: usize) {
+    pub(crate) fn run(n: usize, scale: f64) { // 1000
         let subj_path = Util::spiral(n, 100.0);
 
-        let it_count = ((1000.0 / (n as f64)) as usize).max(1);
+        let it_count = ((scale / (n as f64)) as usize).max(1);
         let sq_it_count= it_count * it_count;
 
         let start = Instant::now();

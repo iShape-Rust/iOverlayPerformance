@@ -40,13 +40,13 @@ pub(crate) struct WindowsTest;
 
 // A grid of square frames, each with a smaller square cutout in the center.
 impl WindowsTest {
-    pub(crate) fn run(n: usize, rule: OverlayRule, solver: Solver) {
+    pub(crate) fn run(n: usize, rule: OverlayRule, solver: Solver, scale: f64) { // 500
         let offset = 30;
         let x = (n as i32) * offset / 2;
         let origin = IntPoint::new(-x, -x);
         let (subj_paths, clip_paths) = Util::many_windows(origin, 20, 10, offset, n);
 
-        let it_count = ((500.0 / (n as f64)) as usize).max(1);
+        let it_count = ((scale / (n as f64)) as usize).max(1);
         let sq_it_count= it_count * it_count;
 
         let start = Instant::now();

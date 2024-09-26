@@ -55,10 +55,10 @@ pub(crate) struct NestedSquaresTest;
 
 // A series of concentric squares, each progressively larger than the last.
 impl NestedSquaresTest {
-    pub(crate) fn run(n: usize, rule: OverlayRule, solver: Solver) {
+    pub(crate) fn run(n: usize, rule: OverlayRule, solver: Solver, scale: f64) { // 500
         let (subj_paths, clip_paths) = Util::concentric_squares(4, n);
 
-        let it_count = ((500.0 / (n as f64)) as usize).max(1);
+        let it_count = ((scale / (n as f64)) as usize).max(1);
         let sq_it_count= it_count * it_count;
 
         let start = Instant::now();

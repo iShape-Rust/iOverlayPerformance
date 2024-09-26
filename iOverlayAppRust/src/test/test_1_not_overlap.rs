@@ -44,11 +44,11 @@ multithreading off
 
 // A grid of not overlapping squares.
 impl NotOverlapTest {
-    pub(crate) fn run(n: usize, rule: OverlayRule, solver: Solver) {
+    pub(crate) fn run(n: usize, rule: OverlayRule, solver: Solver, scale: f64) { // 1000
         let subj_paths = Util::many_squares(IntPoint::new(0, 0), 10, 30, n);
         let clip_paths = Util::many_squares(IntPoint::new(15, 15), 10, 30, n - 1);
 
-        let it_count = ((1000.0 / (n as f64)) as usize).max(1);
+        let it_count = ((scale / (n as f64)) as usize).max(1);
         let sq_it_count= it_count * it_count;
 
         let start = Instant::now();

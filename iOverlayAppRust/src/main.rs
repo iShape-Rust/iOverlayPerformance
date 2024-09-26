@@ -34,8 +34,8 @@ fn main() {
         if args_map.is_empty() {
             args_map.insert("multithreading".to_string(), "false".to_string());
             args_map.insert("complex".to_string(), "false".to_string());
-            args_map.insert("test".to_string(), 0.to_string());
-            let count = 1 << 8;
+            args_map.insert("test".to_string(), 1.to_string());
+            let count = 1 << 6;
             args_map.insert("count".to_string(), count.to_string());
         }
     }
@@ -54,7 +54,7 @@ fn main() {
         None
     };
 
-    let solver = Solver { strategy: Strategy::Auto, precision: Precision::Auto, multithreading};
+    let solver = Solver { strategy: Strategy::List, precision: Precision::Auto, multithreading};
 
     if complex {
         match test {
@@ -85,22 +85,22 @@ fn main() {
         let count: usize = count_key.parse().expect("Unable to parse count as an integer");
         match test {
             0 => {
-                CheckerboardTest::run(count, OverlayRule::Xor, solver);
+                CheckerboardTest::run(count, OverlayRule::Xor, solver, 1.0);
             }
             1 => {
-                NotOverlapTest::run(count, OverlayRule::Union, solver);
+                NotOverlapTest::run(count, OverlayRule::Union, solver, 1.0);
             }
             2 => {
-                LinesNetTest::run(count, OverlayRule::Intersect, solver)
+                LinesNetTest::run(count, OverlayRule::Intersect, solver, 1.0)
             }
             3 => {
-                SpiralTest::run(count);
+                SpiralTest::run(count, 100.0);
             }
             4 => {
-                WindowsTest::run(count, OverlayRule::Difference, solver);
+                WindowsTest::run(count, OverlayRule::Difference, solver, 1.0);
             }
             5 => {
-                NestedSquaresTest::run(count, OverlayRule::Xor, solver);
+                NestedSquaresTest::run(count, OverlayRule::Xor, solver, 1.0);
             }
             _ => {
                 println!("Test is not found");
@@ -113,7 +113,7 @@ fn run_test_0(solver: Solver) {
     println!("run Checkerboard test");
     for i in 1..12 {
         let n = 1 << i;
-        CheckerboardTest::run(n, OverlayRule::Xor, solver)
+        CheckerboardTest::run(n, OverlayRule::Xor, solver, 1000.0)
     }
 }
 
@@ -121,7 +121,7 @@ fn run_test_1(solver: Solver) {
     println!("run NotOverlap test");
     for i in 1..12 {
         let n = 1 << i;
-        NotOverlapTest::run(n, OverlayRule::Xor, solver)
+        NotOverlapTest::run(n, OverlayRule::Xor, solver, 1000.0)
     }
 }
 
@@ -129,7 +129,7 @@ fn run_test_2(solver: Solver) {
     println!("run LinesNet test");
     for i in 1..12 {
         let n = 1 << i;
-        LinesNetTest::run(n, OverlayRule::Intersect, solver)
+        LinesNetTest::run(n, OverlayRule::Intersect, solver, 500.0)
     }
 }
 
@@ -137,7 +137,7 @@ fn run_test_3() {
     println!("run Spiral test");
     for i in 1..21 {
         let n = 1 << i;
-        SpiralTest::run(n)
+        SpiralTest::run(n, 1000.0)
     }
 }
 
@@ -145,7 +145,7 @@ fn run_test_4(solver: Solver) {
     println!("run Windows test");
     for i in 1..12 {
         let n = 1 << i;
-        WindowsTest::run(n, OverlayRule::Difference, solver)
+        WindowsTest::run(n, OverlayRule::Difference, solver, 500.0)
     }
 }
 
@@ -153,6 +153,6 @@ fn run_test_5(solver: Solver) {
     println!("run NestedSquares test");
     for i in 1..19 {
         let n = 1 << i;
-        NestedSquaresTest::run(n, OverlayRule::Xor, solver)
+        NestedSquaresTest::run(n, OverlayRule::Xor, solver, 500.0)
     }
 }
