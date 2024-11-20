@@ -1,7 +1,7 @@
 use std::f64::consts::PI;
-use i_overlay::i_float::f64_point::F64Point;
-use i_overlay::i_float::point::IntPoint;
-use i_overlay::i_shape::f64::shape::F64Path;
+use i_overlay::i_float::float::point::FloatPoint;
+use i_overlay::i_float::int::point::IntPoint;
+use i_overlay::i_shape::base::data::Contour;
 use i_overlay::i_shape::int::path::IntPath;
 
 pub(super) struct Util;
@@ -142,7 +142,7 @@ impl Util {
         result
     }
 
-    pub(super) fn spiral(count: usize, radius: f64) -> F64Path {
+    pub(super) fn spiral(count: usize, radius: f64) -> Contour<FloatPoint<f64>> {
         let mut a_path = Vec::with_capacity(4 * count);
         let mut b_path = Vec::with_capacity(2 * count);
 
@@ -150,7 +150,7 @@ impl Util {
         let mut r = radius;
         let w = 0.1 * radius;
 
-        let c0 = F64Point { x: 0.0, y: 0.0 };
+        let c0 = FloatPoint { x: 0.0, y: 0.0 };
         let mut p0 = c0;
 
         for i in 0..count {
@@ -162,9 +162,9 @@ impl Util {
                 r - 0.2 * radius
             };
 
-            let p = F64Point { x: rr * sx, y: rr * sy };
+            let p = FloatPoint { x: rr * sx, y: rr * sy };
             let n = (p - p0).normalize();
-            let t = F64Point { x: w * -n.y, y: w * n.x };
+            let t = FloatPoint { x: w * -n.y, y: w * n.x };
 
             a_path.push(p0 + t);
             a_path.push(p + t);

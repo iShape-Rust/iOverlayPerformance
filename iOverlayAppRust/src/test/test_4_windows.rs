@@ -3,7 +3,7 @@ use i_overlay::core::fill_rule::FillRule;
 use i_overlay::core::overlay::Overlay;
 use i_overlay::core::overlay_rule::OverlayRule;
 use i_overlay::core::solver::Solver;
-use i_overlay::i_float::point::IntPoint;
+use i_overlay::i_float::int::point::IntPoint;
 use crate::test::util::Util;
 
 pub(crate) struct WindowsTest;
@@ -36,6 +36,20 @@ pub(crate) struct WindowsTest;
 524288     - 0.885619
 2097152     - 3.645652
 8388608     - 15.393479
+
+// fragments
+
+8     - 0.000005
+32     - 0.000020
+128     - 0.000094
+512     - 0.000508
+2048     - 0.001657
+8192     - 0.007535
+32768     - 0.038888
+131072     - 0.190919
+524288     - 0.817665
+2097152     - 3.731909
+8388608     - 14.968132
 */
 
 // A grid of square frames, each with a smaller square cutout in the center.
@@ -52,9 +66,8 @@ impl WindowsTest {
         let start = Instant::now();
 
         for _ in 0..sq_it_count {
-            let overlay = Overlay::with_paths(&subj_paths, &clip_paths);
-            let graph = overlay.into_graph_with_solver(FillRule::NonZero, solver);
-            _ = graph.extract_shapes(rule);
+            let _ = Overlay::with_contours(&subj_paths, &clip_paths)
+                .overlay_with_min_area_and_solver(rule, FillRule::NonZero, 0, solver);
         }
 
         let duration = start.elapsed();

@@ -34,8 +34,8 @@ fn main() {
         if args_map.is_empty() {
             args_map.insert("multithreading".to_string(), "false".to_string());
             args_map.insert("complex".to_string(), "false".to_string());
-            args_map.insert("test".to_string(), 1.to_string());
-            let count = 1 << 6;
+            args_map.insert("test".to_string(), 0.to_string());
+            let count = 1 << 2;
             args_map.insert("count".to_string(), count.to_string());
         }
     }

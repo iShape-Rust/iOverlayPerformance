@@ -1,6 +1,6 @@
 use std::time::Instant;
 use i_overlay::core::fill_rule::FillRule;
-use i_overlay::f64::simplify::Simplify;
+use i_overlay::float::simplify::SimplifyShape;
 use crate::test::util::Util;
 
 pub(crate) struct SpiralTest;
@@ -57,6 +57,28 @@ multithreading off
 524288     - 2.495338
 1048576     - 5.089000
 
+// fragments
+
+2     - 0.000002
+4     - 0.000005
+8     - 0.000009
+16     - 0.000019
+32     - 0.000046
+64     - 0.000124
+128     - 0.000294
+256     - 0.000640
+512     - 0.001554
+1024     - 0.003454
+2048     - 0.006058
+4096     - 0.012508
+8192     - 0.024406
+16384     - 0.056299
+32768     - 0.104841
+65536     - 0.236599
+131072     - 0.448328
+262144     - 0.996419
+524288     - 1.909072
+1048576     - 4.246205
  */
 
 // Two irregular self-intersecting polygons are generated, the vertices of which are defined by a fixed radius and angle.
@@ -70,7 +92,7 @@ impl SpiralTest {
         let start = Instant::now();
 
         for _ in 0..sq_it_count {
-            let _ = subj_path.clone().simplify(FillRule::NonZero, 0.0);
+            let _ = subj_path.simplify_shape(FillRule::NonZero, 0.0);
         }
 
         let duration = start.elapsed();

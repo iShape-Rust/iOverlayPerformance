@@ -3,7 +3,7 @@ use i_overlay::core::fill_rule::FillRule;
 use i_overlay::core::overlay::Overlay;
 use i_overlay::core::overlay_rule::OverlayRule;
 use i_overlay::core::solver::Solver;
-use i_overlay::i_float::point::IntPoint;
+use i_overlay::i_float::int::point::IntPoint;
 use crate::test::util::Util;
 
 pub(crate) struct NotOverlapTest;
@@ -40,8 +40,20 @@ multithreading off
 2095105     - 3.221546
 8384513     - 14.279949
 
+// fragments
 
- */
+5     - 0.000003
+25     - 0.000012
+113     - 0.000060
+481     - 0.000327
+1985     - 0.001576
+8065     - 0.005867
+32513     - 0.028128
+130561     - 0.126129
+523265     - 0.625514
+2095105     - 2.626167
+8384513     - 12.642988
+*/
 
 // A grid of not overlapping squares.
 impl NotOverlapTest {
@@ -55,9 +67,8 @@ impl NotOverlapTest {
         let start = Instant::now();
 
         for _i in 0..sq_it_count {
-            let overlay = Overlay::with_paths(&subj_paths, &clip_paths);
-            let graph = overlay.into_graph_with_solver(FillRule::NonZero, solver);
-            _ = graph.extract_shapes(rule);
+            let _ = Overlay::with_contours(&subj_paths, &clip_paths)
+                .overlay_with_min_area_and_solver(rule, FillRule::NonZero, 0, solver);
         }
 
         let duration = start.elapsed();

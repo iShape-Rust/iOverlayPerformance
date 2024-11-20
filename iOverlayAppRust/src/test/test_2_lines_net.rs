@@ -39,6 +39,21 @@ multithreading off
 1024     - 0.526200
 2048     - 2.304091
 4096     - 10.187985
+
+// fragments
+
+4     - 0.000004
+8     - 0.000014
+16     - 0.000048
+32     - 0.000192
+64     - 0.001013
+128     - 0.003924
+256     - 0.018736
+512     - 0.086755
+1024     - 0.415207
+2048     - 1.747713
+4096     - 7.459701
+
  */
 
 // A grid is formed by the intersection of a set of vertical and horizontal lines.
@@ -53,9 +68,8 @@ impl LinesNetTest {
         let start = Instant::now();
 
         for _ in 0..sq_it_count {
-            let overlay = Overlay::with_paths(&subj_paths, &clip_paths);
-            let graph = overlay.into_graph_with_solver(FillRule::NonZero, solver);
-            _ = graph.extract_shapes(rule);
+            let _ = Overlay::with_contours(&subj_paths, &clip_paths)
+                .overlay_with_min_area_and_solver(rule, FillRule::NonZero, 0, solver);
         }
 
         let duration = start.elapsed();

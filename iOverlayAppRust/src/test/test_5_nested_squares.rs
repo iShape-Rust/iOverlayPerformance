@@ -51,6 +51,27 @@ pub(crate) struct NestedSquaresTest;
 131072     - 1.602064
 262144     - 4.685150
 524288     - 10.136123
+
+// fragments
+
+4     - 0.000009
+8     - 0.000017
+16     - 0.000034
+32     - 0.000077
+64     - 0.000193
+128     - 0.000561
+256     - 0.001807
+512     - 0.002701
+1024     - 0.007929
+2048     - 0.024742
+4096     - 0.054085
+8192     - 0.245628
+16384     - 0.487084
+32768     - 1.838686
+65536     - 4.037068
+131072     - 15.637260
+262144     - 31.144633
+524288     - 235.428218
 */
 
 // A series of concentric squares, each progressively larger than the last.
@@ -64,9 +85,8 @@ impl NestedSquaresTest {
         let start = Instant::now();
 
         for _ in 0..sq_it_count {
-            let overlay = Overlay::with_paths(&subj_paths, &clip_paths);
-            let graph = overlay.into_graph_with_solver(FillRule::EvenOdd, solver);
-            _ = graph.extract_shapes(rule);
+            let _ = Overlay::with_contours(&subj_paths, &clip_paths)
+                .overlay_with_min_area_and_solver(rule, FillRule::NonZero, 0, solver);
         }
         let duration = start.elapsed();
         let time = duration.as_secs_f64() / sq_it_count as f64;

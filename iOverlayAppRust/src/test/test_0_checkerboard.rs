@@ -3,7 +3,7 @@ use i_overlay::core::fill_rule::FillRule;
 use i_overlay::core::overlay::Overlay;
 use i_overlay::core::overlay_rule::OverlayRule;
 use i_overlay::core::solver::Solver;
-use i_overlay::i_float::point::IntPoint;
+use i_overlay::i_float::int::point::IntPoint;
 use crate::test::util::Util;
 
 pub(crate) struct CheckerboardTest;
@@ -40,6 +40,20 @@ multithreading off
 512(523265 5.7)     - 2.023438(0.3)
 1024(2095105 6.3)     - 9.311807(1.0)
 2048(8384513 6.9)     - 39.209092(1.6)
+
+// fragments
+2(5 0.7)     - 0.000006(-5.2)
+4(25 1.4)     - 0.000036(-4.4)
+8(113 2.1)     - 0.000191(-3.7)
+16(481 2.7)     - 0.001101(-3.0)
+32(1985 3.3)     - 0.004865(-2.3)
+64(8065 3.9)     - 0.021389(-1.7)
+128(32513 4.5)     - 0.091687(-1.0)
+256(130561 5.1)     - 0.423072(-0.4)
+512(523265 5.7)     - 2.041001(0.3)
+1024(2095105 6.3)     - 10.413054(1.0)
+2048(8384513 6.9)     - 38.479400(1.6)
+
  */
 
 // A grid of overlapping squares forming a simple checkerboard pattern.
@@ -54,9 +68,8 @@ impl CheckerboardTest {
         let start = Instant::now();
 
         for _i in 0..sq_it_count {
-            let overlay = Overlay::with_paths(&subj_paths, &clip_paths);
-            let graph = overlay.into_graph_with_solver(FillRule::NonZero, solver);
-            _ = graph.extract_shapes(rule);
+            let _ = Overlay::with_contours(&subj_paths, &clip_paths)
+            .overlay_with_min_area_and_solver(rule, FillRule::NonZero, 0, solver);
         }
 
         let duration = start.elapsed();
