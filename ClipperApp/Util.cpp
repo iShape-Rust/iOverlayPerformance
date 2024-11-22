@@ -30,22 +30,6 @@ Paths64 manySquares(Point64 start, long long size, long long offset, int n) {
     return subjects;
 }
 
-Path64 irregularPolygon(double radius, double angle, int n) {
-    Path64 polygon;
-    polygon.reserve(n);
-    const double da = M_PI * 0.7;
-    double a = angle;
-
-    for (int i = 0; i < n; ++i) {
-        double x = radius * cos(a);
-        double y = radius * sin(a);
-        polygon.emplace_back(static_cast<long long>(x), static_cast<long long>(y));
-        a += da;
-    }
-
-    return polygon;
-}
-
 std::pair<Paths64, Paths64> manyWindows(Point64 start, long long a, long long b, long long offset, int n) {
     Paths64 boundaries, holes;
     boundaries.reserve(n * n);
