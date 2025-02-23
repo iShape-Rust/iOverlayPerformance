@@ -4,27 +4,35 @@
 
 #ifndef BOOSTAPP_UTIL_H
 #define BOOSTAPP_UTIL_H
-#include <boost/geometry.hpp>
-#include <boost/geometry/strategies/cartesian/intersection.hpp>
+#include <boost/polygon/polygon.hpp>
+#include <boost/polygon/detail/boolean_op.hpp>
 
-namespace bg = boost::geometry;
+using namespace boost::polygon;
+using namespace boost::polygon::operators;
 
-using IntersectionStrategy = bg::strategy::intersection::cartesian_segments<>;
+typedef polygon_data<int> Polygon;
+typedef polygon_set_data<int> PolygonSet;
+typedef polygon_traits<Polygon>::point_type Point;
 
-using Point64 = bg::model::d2::point_xy<long long>;
-using Polygon64 = bg::model::polygon<Point64>;
-using MultiPolygon64 = bg::model::multi_polygon<Polygon64>;
+typedef polygon_45_data<int> Polygon45;
+typedef polygon_45_set_data<int> PolygonSet45;
+typedef polygon_traits<Polygon45>::point_type Point45;
 
-using PointD = bg::model::d2::point_xy<double>;
-using PathD = std::vector<PointD>;
-using PolygonD = bg::model::polygon<PointD>;
-using MultiPolygonD = bg::model::multi_polygon<PolygonD>;
+PolygonSet repeat(std::vector<Point> path, int dx, int dy, int n);
+PolygonSet manySquares(const Point& start, int size, int offset, int n);
+std::pair<PolygonSet, PolygonSet> manyWindows(const Point& start, int a, int b, int offset, int n);
+std::pair<PolygonSet, PolygonSet> concentricSquares(int a, int n);
+PolygonSet manyLinesX(int a, int n);
+PolygonSet manyLinesY(int a, int n);
 
-MultiPolygon64 manySquares(Point64 start, long long size, long long offset, int n);
-std::pair<MultiPolygon64, MultiPolygon64> manyWindows(Point64 start, long long a, long long b, long long offset, int n);
-std::pair<MultiPolygon64, MultiPolygon64> concentricSquares(int a, int n);
-PolygonD spiral(int count, int radius);
-MultiPolygon64 manyLinesX(long long a, int n);
-MultiPolygon64 manyLinesY(long long a, int n);
+PolygonSet45 repeat45(const std::vector<Point45>& origin, int dx, int dy, int n);
+PolygonSet45 manySquares45(const Point45& start, int size, int offset, int n);
+std::pair<PolygonSet45, PolygonSet45> manyWindows45(const Point45& start, int a, int b, int offset, int n);
+std::pair<PolygonSet45, PolygonSet45> concentricSquares45(int a, int n);
+PolygonSet45 manyLinesX45(int a, int n);
+PolygonSet45 manyLinesY45(int a, int n);
+
+
+//PolygonD spiral(int count, int radius);
 
 #endif //BOOSTAPP_UTIL_H

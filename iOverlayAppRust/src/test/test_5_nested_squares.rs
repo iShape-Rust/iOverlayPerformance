@@ -5,7 +5,7 @@ use i_overlay::core::overlay_rule::OverlayRule;
 use i_overlay::core::solver::Solver;
 use crate::test::util::Util;
 
-pub(crate) struct NestedSquaresTest;
+pub(crate) struct CrossTest;
 
 /*
 
@@ -52,7 +52,7 @@ pub(crate) struct NestedSquaresTest;
 */
 
 // A series of concentric squares, each progressively larger than the last.
-impl NestedSquaresTest {
+impl CrossTest {
     pub(crate) fn run(n: usize, rule: OverlayRule, solver: Solver, scale: f64) { // 500
         let (subj_paths, clip_paths) = Util::concentric_squares(4, n);
 

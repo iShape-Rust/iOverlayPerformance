@@ -7,6 +7,7 @@ use i_overlay::i_shape::int::path::IntPath;
 pub(super) struct Util;
 
 impl Util {
+
     pub(super) fn many_squares(start: IntPoint, size: i32, offset: i32, n: usize) -> Vec<IntPath> {
         let mut result = Vec::with_capacity(n * n);
         let mut y = start.y;
@@ -80,8 +81,8 @@ impl Util {
                 IntPoint::new(r, -r + a),
                 IntPoint::new(r, -r),
             ];
-            vert.push(hz_top);
-            vert.push(hz_bot);
+            horz.push(hz_top);
+            horz.push(hz_bot);
 
             let vt_left: IntPath = vec![
                 IntPoint::new(-r, -r),
@@ -95,8 +96,8 @@ impl Util {
                 IntPoint::new(r, r),
                 IntPoint::new(r, -r),
             ];
-            horz.push(vt_left);
-            horz.push(vt_right);
+            vert.push(vt_left);
+            vert.push(vt_right);
 
             r += s;
         }

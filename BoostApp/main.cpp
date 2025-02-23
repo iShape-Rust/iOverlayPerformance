@@ -12,7 +12,7 @@
 
 void run_test_0(bool simple_geometry) {
     std::cout << "run Checkerboard test\n";
-    for (int i = 1; i <9; ++i) {
+    for (int i = 1; i <12; ++i) {
         int n = 1 << i;
         CheckerboardTest::run(n, simple_geometry);
     }
@@ -20,7 +20,7 @@ void run_test_0(bool simple_geometry) {
 
 void run_test_1(bool simple_geometry) {
     std::cout << "run NotOverlap test\n";
-    for (int i = 1; i <9; ++i) {
+    for (int i = 1; i <12; ++i) {
         int n = 1 << i;
         NotOverlapTest::run(n, simple_geometry);
     }
@@ -28,7 +28,7 @@ void run_test_1(bool simple_geometry) {
 
 void run_test_2(bool simple_geometry) {
     std::cout << "run LinesNet test\n";
-    for (int i = 1; i <9; ++i) {
+    for (int i = 1; i <12; ++i) {
         int n = 1 << i;
         LinesNetTest::run(n, simple_geometry);
     }
@@ -36,7 +36,7 @@ void run_test_2(bool simple_geometry) {
 
 void run_test_3() {
     std::cout << "run Spiral test\n";
-    for (int i = 1; i <16; ++i) {
+    for (int i = 1; i <21; ++i) {
         int n = 1 << i;
         SpiralTest::run(n);
     }
@@ -52,7 +52,7 @@ void run_test_4(bool simple_geometry) {
 
 void run_test_5(bool simple_geometry) {
     std::cout << "run NestedSquares test\n";
-    for (int i = 1; i <11; ++i) {
+    for (int i = 1; i <19; ++i) {
         int n = 1 << i;
         NestedSquaresTest::run(n, simple_geometry);
     }
@@ -114,6 +114,7 @@ int main(int argc, char* argv[]) {
             std::cout << "Test is not found\n";
             break;
     }
+
 
     return 0;
 }

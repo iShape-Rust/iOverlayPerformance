@@ -7,7 +7,9 @@ use crate::test::test_1_not_overlap::NotOverlapTest;
 use crate::test::test_2_lines_net::LinesNetTest;
 use crate::test::test_3_spiral::SpiralTest;
 use crate::test::test_4_windows::WindowsTest;
-use crate::test::test_5_nested_squares::NestedSquaresTest;
+use crate::test::test_5_nested_squares::CrossTest;
+use crate::test::test_6_corrosion::CorrosionTest;
+use crate::test::test_7_concentric::ConcentricTest;
 
 mod test;
 
@@ -34,8 +36,8 @@ fn main() {
         if args_map.is_empty() {
             args_map.insert("multithreading".to_string(), "false".to_string());
             args_map.insert("complex".to_string(), "false".to_string());
-            args_map.insert("test".to_string(), 0.to_string());
-            let count = 1 << 2;
+            args_map.insert("test".to_string(), 6.to_string());
+            let count = 2;
             args_map.insert("count".to_string(), count.to_string());
         }
     }
@@ -54,7 +56,7 @@ fn main() {
         None
     };
 
-    let solver = Solver { strategy: Strategy::Auto, precision: Precision::Auto, multithreading};
+    let solver = Solver { strategy: Strategy::Auto, precision: Precision::MEDIUM, multithreading};
 
     if complex {
         match test {
@@ -75,6 +77,12 @@ fn main() {
             }
             5 => {
                 run_test_5(solver);
+            }
+            6 => {
+                run_test_6(solver);
+            }
+            7 => {
+                run_test_7(solver);
             }
             _ => {
                 println!("Test is not found");
@@ -100,7 +108,13 @@ fn main() {
                 WindowsTest::run(count, OverlayRule::Difference, solver, 1.0);
             }
             5 => {
-                NestedSquaresTest::run(count, OverlayRule::Xor, solver, 1.0);
+                CrossTest::run(count, OverlayRule::Xor, solver, 1.0);
+            }
+            6 => {
+                CorrosionTest::run(count, OverlayRule::Difference, 1.0);
+            }
+            7 => {
+                ConcentricTest::run(count, OverlayRule::Intersect, 1.0);
             }
             _ => {
                 println!("Test is not found");
@@ -153,6 +167,24 @@ fn run_test_5(solver: Solver) {
     println!("run NestedSquares test");
     for i in 1..19 {
         let n = 1 << i;
-        NestedSquaresTest::run(n, OverlayRule::Xor, solver, 500.0)
+        CrossTest::run(n, OverlayRule::Xor, solver, 500.0)
+    }
+}
+
+fn run_test_6(_: Solver) {
+    println!("run Corrosion test");
+    let mut n = 1;
+    for _ in 1..12 {
+        CorrosionTest::run(n, OverlayRule::Difference, 100.0);
+        n = n << 1;
+    }
+}
+
+fn run_test_7(_: Solver) {
+    println!("run Concentric test");
+    let mut n = 1;
+    for _ in 1..12 {
+        ConcentricTest::run(n, OverlayRule::Intersect, 100.0);
+        n = n << 1;
     }
 }
