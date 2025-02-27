@@ -3,44 +3,45 @@ use i_overlay::core::overlay_rule::OverlayRule;
 use i_overlay::float::single::SingleFloatOverlay;
 use std::f64::consts::PI;
 use std::time::Instant;
+use i_overlay::core::solver::Solver;
 
 pub(crate) struct ConcentricTest;
 
 /*
 
-// 6
+// 7
 // Difference:
 
 // multithreading on
 1     - 0.000016
-2     - 0.000082
-4     - 0.000396
-8     - 0.001793
-16     - 0.008603
-32     - 0.028113
-64     - 0.088344
-128     - 0.366124
-256     - 1.436649
-512     - 6.767324
-1024     - 33.414751
+2     - 0.000086
+4     - 0.000407
+8     - 0.001839
+16     - 0.008672
+32     - 0.028811
+64     - 0.090131
+128     - 0.368713
+256     - 1.456724
+512     - 6.657090
+1024     - 31.702080
 
 // multithreading off
 1     - 0.000016
-2     - 0.000083
-4     - 0.000392
-8     - 0.001793
-16     - 0.008788
-32     - 0.028221
-64     - 0.089257
-128     - 0.376340
-256     - 1.495690
-512     - 6.848092
-1024     - 35.164520
+2     - 0.000082
+4     - 0.000387
+8     - 0.001811
+16     - 0.008894
+32     - 0.036036
+64     - 0.127312
+128     - 0.510567
+256     - 2.102224
+512     - 10.343500
+1024     - 52.008158
 */
 
 // A series of concentric squares, each progressively larger than the last.
 impl ConcentricTest {
-    pub(crate) fn run(n: usize, rule: OverlayRule, scale: f64) {
+    pub(crate) fn run(n: usize, rule: OverlayRule, solver: Solver, scale: f64) {
         let (subj_paths, clip_paths) = Self::geometry(100.0, n);
 
         let it_count = ((scale / (n as f64)) as usize).max(1);
@@ -49,7 +50,7 @@ impl ConcentricTest {
         let start = Instant::now();
 
         for _ in 0..sq_it_count {
-            subj_paths.overlay(&clip_paths, rule, FillRule::NonZero);
+            subj_paths.overlay_with_filter_and_solver(&clip_paths, rule, FillRule::NonZero, Default::default(), solver);
         }
         let duration = start.elapsed();
         let time = duration.as_secs_f64() / sq_it_count as f64;

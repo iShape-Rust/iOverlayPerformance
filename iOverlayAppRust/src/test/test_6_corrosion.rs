@@ -3,6 +3,7 @@ use i_overlay::core::overlay_rule::OverlayRule;
 use i_overlay::float::single::SingleFloatOverlay;
 use std::f64::consts::PI;
 use std::time::Instant;
+use i_overlay::core::solver::Solver;
 
 pub(crate) struct CorrosionTest;
 
@@ -13,35 +14,35 @@ pub(crate) struct CorrosionTest;
 
 // multithreading on
 1     - 0.000010
-2     - 0.000059
-4     - 0.000361
-8     - 0.001819
-16     - 0.004534
-32     - 0.018970
-64     - 0.082330
-128     - 0.335374
-256     - 1.441913
-512     - 5.635038
-1024     - 26.365589
-
+2     - 0.000061
+4     - 0.000364
+8     - 0.001869
+16     - 0.004424
+32     - 0.017941
+64     - 0.079459
+128     - 0.326245
+256     - 1.313516
+512     - 5.392524
+1024     - 22.228494
 
 // multithreading off
 1     - 0.000010
-2     - 0.000060
-4     - 0.000367
-8     - 0.001838
-16     - 0.004506
-32     - 0.017891
-64     - 0.078935
-128     - 0.331489
-256     - 1.360146
-512     - 5.431161
-1024     - 24.173921
+2     - 0.000062
+4     - 0.000365
+8     - 0.001864
+16     - 0.005909
+32     - 0.023877
+64     - 0.113112
+128     - 0.448500
+256     - 1.827635
+512     - 7.545861
+1024     - 33.375702
+
 */
 
 // A series of concentric squares, each progressively larger than the last.
 impl CorrosionTest {
-    pub(crate) fn run(n: usize, rule: OverlayRule, scale: f64) {
+    pub(crate) fn run(n: usize, rule: OverlayRule, solver: Solver, scale: f64) {
         // 500
         let (subj_paths, clip_paths) = Self::geometry(100.0, n);
 
@@ -51,7 +52,7 @@ impl CorrosionTest {
         let start = Instant::now();
 
         for _ in 0..sq_it_count {
-            subj_paths.overlay(&clip_paths, rule, FillRule::NonZero);
+            subj_paths.overlay_with_filter_and_solver(&clip_paths, rule, FillRule::NonZero, Default::default(), solver);
         }
         let duration = start.elapsed();
         let time = duration.as_secs_f64() / sq_it_count as f64;

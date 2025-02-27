@@ -37,7 +37,7 @@ fn main() {
             args_map.insert("multithreading".to_string(), "false".to_string());
             args_map.insert("complex".to_string(), "false".to_string());
             args_map.insert("test".to_string(), 6.to_string());
-            let count = 2;
+            let count = 128;
             args_map.insert("count".to_string(), count.to_string());
         }
     }
@@ -56,7 +56,7 @@ fn main() {
         None
     };
 
-    let solver = Solver { strategy: Strategy::Auto, precision: Precision::MEDIUM, multithreading};
+    let solver = Solver { strategy: Strategy::Auto, precision: Precision::HIGH, multithreading};
 
     if complex {
         match test {
@@ -111,10 +111,10 @@ fn main() {
                 CrossTest::run(count, OverlayRule::Xor, solver, 1.0);
             }
             6 => {
-                CorrosionTest::run(count, OverlayRule::Difference, 1.0);
+                CorrosionTest::run(count, OverlayRule::Difference, solver, 1.0);
             }
             7 => {
-                ConcentricTest::run(count, OverlayRule::Intersect, 1.0);
+                ConcentricTest::run(count, OverlayRule::Intersect, solver, 1.0);
             }
             _ => {
                 println!("Test is not found");
@@ -171,20 +171,20 @@ fn run_test_5(solver: Solver) {
     }
 }
 
-fn run_test_6(_: Solver) {
+fn run_test_6(solver: Solver) {
     println!("run Corrosion test");
     let mut n = 1;
     for _ in 1..12 {
-        CorrosionTest::run(n, OverlayRule::Difference, 100.0);
+        CorrosionTest::run(n, OverlayRule::Difference, solver, 100.0);
         n = n << 1;
     }
 }
 
-fn run_test_7(_: Solver) {
+fn run_test_7(solver: Solver) {
     println!("run Concentric test");
     let mut n = 1;
     for _ in 1..12 {
-        ConcentricTest::run(n, OverlayRule::Intersect, 100.0);
+        ConcentricTest::run(n, OverlayRule::Intersect, solver, 100.0);
         n = n << 1;
     }
 }
