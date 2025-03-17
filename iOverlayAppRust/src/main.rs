@@ -10,6 +10,7 @@ use crate::test::test_4_windows::WindowsTest;
 use crate::test::test_5_nested_squares::CrossTest;
 use crate::test::test_6_corrosion::CorrosionTest;
 use crate::test::test_7_concentric::ConcentricTest;
+use crate::test::test_8_wind_mill::WindMillTest;
 
 mod test;
 
@@ -84,6 +85,9 @@ fn main() {
             7 => {
                 run_test_7(solver);
             }
+            8 => {
+                run_test_8(solver);
+            }
             _ => {
                 println!("Test is not found");
             }
@@ -114,6 +118,9 @@ fn main() {
                 CorrosionTest::run(count, OverlayRule::Difference, solver, 1.0);
             }
             7 => {
+                ConcentricTest::run(count, OverlayRule::Intersect, solver, 1.0);
+            }
+            8 => {
                 ConcentricTest::run(count, OverlayRule::Intersect, solver, 1.0);
             }
             _ => {
@@ -187,4 +194,14 @@ fn run_test_7(solver: Solver) {
         ConcentricTest::run(n, OverlayRule::Intersect, solver, 100.0);
         n = n << 1;
     }
+}
+
+fn run_test_8(solver: Solver) {
+    println!("run WindMill test");
+    let mut n = 1;
+    for _ in 1..12 {
+        WindMillTest::run(n, OverlayRule::Difference, solver, 100.0);
+        n = n << 1;
+    }
+    WindMillTest::validate(100, OverlayRule::Difference, solver);
 }
