@@ -1,7 +1,5 @@
-use std::env;
-use std::collections::HashMap;
 use i_overlay::core::overlay_rule::OverlayRule;
-use i_overlay::core::solver::{MultithreadOptions, Precision, Solver, Strategy};
+use i_overlay::core::solver::{Solver, MultithreadOptions, Precision, Strategy};
 use crate::test::test_0_checkerboard::CheckerboardTest;
 use crate::test::test_1_not_overlap::NotOverlapTest;
 use crate::test::test_2_lines_net::LinesNetTest;
@@ -11,47 +9,35 @@ use crate::test::test_5_nested_squares::CrossTest;
 use crate::test::test_6_corrosion::CorrosionTest;
 use crate::test::test_7_concentric::ConcentricTest;
 use crate::test::test_8_wind_mill::WindMillTest;
+use crate::util::args::EnvArgs;
+
 
 mod test;
+mod util;
 
 fn main() {
-    let args = env::args();
-    let mut args_iter = args.peekable();
-    let mut args_map = HashMap::new();
-
-    while let Some(arg) = args_iter.next() {
-        if arg.starts_with("--") {
-            let key = arg.trim_start_matches("--").to_owned();
-            // If the next argument is also a key, store a boolean flag; otherwise, store the value.
-            let value = if args_iter.peek().map_or(false, |a| a.starts_with("--")) {
-                "true".to_string()
-            } else {
-                args_iter.next().unwrap()
-            };
-            args_map.insert(key, value);
-        }
-    }
-
     #[cfg(debug_assertions)]
     {
-        if args_map.is_empty() {
-            args_map.insert("multithreading".to_string(), "false".to_string());
-            args_map.insert("complex".to_string(), "false".to_string());
-            args_map.insert("test".to_string(), 6.to_string());
-            let count = 128;
-            args_map.insert("count".to_string(), count.to_string());
-        }
+        debug_run();
     }
 
-    let test_key = args_map.get("test").expect("Test number is not set");
-    let multithreading_key = args_map.get("multithreading").expect("Multithreading is not set");
-    let complex_key = args_map.get("complex").expect("Complex is not set");
+    #[cfg(not(debug_assertions))]
+    {
 
-    let test: usize = test_key.parse().expect("Unable to parse test as an integer");
-    let multithreading: bool = multithreading_key.parse().expect("Unable to parse multithreading as an boolean");
-    let complex: bool = complex_key.parse().expect("Unable to parse complex as an boolean");
+        release_run();
+    }
+}
 
-    let multithreading = if multithreading {
+#[cfg(debug_assertions)]
+fn debug_run() {
+    // CheckerboardTest::run(10, OverlayRule::Xor, Default::default(), 1000.0);
+    CorrosionTest::run(1, OverlayRule::Difference, Default::default(), 100.0);
+}
+
+
+fn release_run() {
+    let args = EnvArgs::new();
+    let multithreading = if args.get_bool("multithreading") {
         Some(MultithreadOptions::default())
     } else {
         None
@@ -59,73 +45,81 @@ fn main() {
 
     let solver = Solver { strategy: Strategy::Auto, precision: Precision::HIGH, multithreading};
 
-    if complex {
-        match test {
-            0 => {
-                run_test_0(solver);
-            }
-            1 => {
-                run_test_1(solver);
-            }
-            2 => {
-                run_test_2(solver)
-            }
-            3 => {
-                run_test_3();
-            }
-            4 => {
-                run_test_4(solver);
-            }
-            5 => {
-                run_test_5(solver);
-            }
-            6 => {
-                run_test_6(solver);
-            }
-            7 => {
-                run_test_7(solver);
-            }
-            8 => {
-                run_test_8(solver);
-            }
-            _ => {
-                println!("Test is not found");
-            }
-        }
+    if args.get_bool("complex") {
+        complex_run(solver, args);
     } else {
-        let count_key = args_map.get("count").expect("Count is not set");
-        let count: usize = count_key.parse().expect("Unable to parse count as an integer");
-        match test {
-            0 => {
-                CheckerboardTest::run(count, OverlayRule::Xor, solver, 1.0);
-            }
-            1 => {
-                NotOverlapTest::run(count, OverlayRule::Union, solver, 1.0);
-            }
-            2 => {
-                LinesNetTest::run(count, OverlayRule::Intersect, solver, 1.0)
-            }
-            3 => {
-                SpiralTest::run(count, 100.0);
-            }
-            4 => {
-                WindowsTest::run(count, OverlayRule::Difference, solver, 1.0);
-            }
-            5 => {
-                CrossTest::run(count, OverlayRule::Xor, solver, 1.0);
-            }
-            6 => {
-                CorrosionTest::run(count, OverlayRule::Difference, solver, 1.0);
-            }
-            7 => {
-                ConcentricTest::run(count, OverlayRule::Intersect, solver, 1.0);
-            }
-            8 => {
-                ConcentricTest::run(count, OverlayRule::Intersect, solver, 1.0);
-            }
-            _ => {
-                println!("Test is not found");
-            }
+        single_run(solver, args);
+    }
+}
+
+fn complex_run(solver: Solver, args: EnvArgs) {
+    let test = args.get_usize("test");
+    match test {
+        0 => {
+            run_test_0(solver);
+        }
+        1 => {
+            run_test_1(solver);
+        }
+        2 => {
+            run_test_2(solver)
+        }
+        3 => {
+            run_test_3();
+        }
+        4 => {
+            run_test_4(solver);
+        }
+        5 => {
+            run_test_5(solver);
+        }
+        6 => {
+            run_test_6(solver);
+        }
+        7 => {
+            run_test_7(solver);
+        }
+        8 => {
+            run_test_8(solver);
+        }
+        _ => {
+            println!("Test is not found");
+        }
+    }
+}
+fn single_run(solver: Solver, args: EnvArgs) {
+    let count = args.get_usize("count");
+    let test = args.get_usize("test");
+    match test {
+        0 => {
+            CheckerboardTest::run(count, OverlayRule::Xor, solver, 1.0);
+        }
+        1 => {
+            NotOverlapTest::run(count, OverlayRule::Union, solver, 1.0);
+        }
+        2 => {
+            LinesNetTest::run(count, OverlayRule::Intersect, solver, 1.0)
+        }
+        3 => {
+            SpiralTest::run(count, 100.0);
+        }
+        4 => {
+            WindowsTest::run(count, OverlayRule::Difference, solver, 1.0);
+        }
+        5 => {
+            CrossTest::run(count, OverlayRule::Xor, solver, 1.0);
+        }
+        6 => {
+            CorrosionTest::run(count, OverlayRule::Difference, solver, 1.0);
+        }
+        7 => {
+            ConcentricTest::run(count, OverlayRule::Intersect, solver, 1.0);
+        }
+        8 => {
+            ConcentricTest::run(count, OverlayRule::Intersect, solver, 1.0);
+        }
+        _ => {
+            println!("Test is not found");
         }
     }
 }

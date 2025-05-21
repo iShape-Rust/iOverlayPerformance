@@ -1,10 +1,12 @@
-use std::time::Instant;
 use i_overlay::core::fill_rule::FillRule;
 use i_overlay::core::overlay::Overlay;
+use i_overlay::core::overlay::ShapeType::{Clip, Subject};
 use i_overlay::core::overlay_rule::OverlayRule;
 use i_overlay::core::solver::Solver;
 use i_overlay::i_float::int::point::IntPoint;
 use i_overlay::i_shape::int::shape::IntContour;
+use std::hint::black_box;
+use std::time::Instant;
 
 pub(crate) struct WindMillTest;
 
@@ -48,9 +50,17 @@ impl WindMillTest {
 
         let start = Instant::now();
 
+        let mut overlay = Overlay::new_custom(
+            subj_paths.len() + clip_paths.len(),
+            Default::default(),
+            solver,
+        );
+
         for _ in 0..sq_it_count {
-            let _ = Overlay::with_contours(&subj_paths, &clip_paths)
-                .overlay_with_min_area_and_solver(rule, FillRule::NonZero, 0, solver);
+            overlay.clear();
+            overlay.add_contours(&subj_paths, Subject);
+            overlay.add_contours(&clip_paths, Clip);
+            let _ = black_box(overlay.overlay(rule, FillRule::NonZero));
         }
         let duration = start.elapsed();
         let time = duration.as_secs_f64() / sq_it_count as f64;
@@ -61,8 +71,9 @@ impl WindMillTest {
     pub(crate) fn validate(n: usize, rule: OverlayRule, solver: Solver) {
         let (subj_paths, clip_paths) = Self::geometry(80, n);
 
-        let res = Overlay::with_contours(&subj_paths, &clip_paths)
-            .overlay_with_min_area_and_solver(rule, FillRule::NonZero, 0, solver);
+        let res =
+            Overlay::with_contours_custom(&subj_paths, &clip_paths, Default::default(), solver)
+                .overlay(rule, FillRule::NonZero);
 
         assert_eq!(res.len(), n * n);
         println!("result validation PASS");

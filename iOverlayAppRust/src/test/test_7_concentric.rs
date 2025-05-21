@@ -50,9 +50,12 @@ impl ConcentricTest {
 
         let start = Instant::now();
 
+        let capacity = subj_paths.len() + clip_paths.len();
+        let mut overlay = FloatOverlay::<[f64; 2], f64>::new_empty(Default::default(), solver, capacity);
+        
         for _ in 0..sq_it_count {
-            let overlay = FloatOverlay::with_subj_and_clip(&subj_paths, &clip_paths);
-            let _res = overlay.overlay_with_filter_and_solver(rule, FillRule::NonZero, Default::default(), solver);
+            overlay.reinit_with_subj_and_clip(&subj_paths, &clip_paths);
+            let _res = overlay.overlay(rule, FillRule::NonZero);
         }
         let duration = start.elapsed();
         let time = duration.as_secs_f64() / sq_it_count as f64;
