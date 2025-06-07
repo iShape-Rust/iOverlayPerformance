@@ -5,6 +5,7 @@ pub(crate) struct EnvArgs {
     map: HashMap<String, String>,
 }
 
+#[allow(dead_code)]
 impl EnvArgs {
     pub(crate) fn new() -> Self {
         let args = env::args();

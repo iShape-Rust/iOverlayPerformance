@@ -35,6 +35,7 @@ fn debug_run() {
 }
 
 
+#[allow(dead_code)]
 fn release_run() {
     let args = EnvArgs::new();
     let multithreading = if args.get_bool("multithreading") {
@@ -52,6 +53,7 @@ fn release_run() {
     }
 }
 
+#[allow(dead_code)]
 fn complex_run(solver: Solver, args: EnvArgs) {
     let test = args.get_usize("test");
     match test {
@@ -87,6 +89,8 @@ fn complex_run(solver: Solver, args: EnvArgs) {
         }
     }
 }
+
+#[allow(dead_code)]
 fn single_run(solver: Solver, args: EnvArgs) {
     let count = args.get_usize("count");
     let test = args.get_usize("test");
